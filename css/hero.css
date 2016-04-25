@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* CSS Document */
+article .half {
+  padding: 0 !important;
+  width: 50%;
+  min-width: 423px;
+  border: none;
+}
+article .half h5 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+article .half h5 img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+article .half div {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  width: 50%;
+  margin: -25% 0 0 -25%;
+  color: #fff;
+  line-height: 24px;
+}
+article .half div h6 {
+  font-size: 15px;
+  color: #fff;
+  border-top: #fff 3px double;
+  border-bottom: #fff 3px double;
+  margin-bottom: 24px;
+  padding: 12px;
+  overflow: hidden;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+}
+article .half div img {
+  width: 50%;
+  min-width: 212px;
+  height: auto;
+}
+article .half div .left {
+  float: left;
+  margin-right: 24px;
+}
+article .half div .right {
+  float: right;
+  margin-left: 24px;
+}
+article .half div a {
+  display: block;
+  text-decoration: none;
+  background-color: #2c7eff;
+  padding: 12px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+article .half div a:hover {
+  opacity: 0.8;
+}
+
+#close {
+  position: fixed;
+  top: 6%;
+  left: 77.5%;
+  z-index: 3;
+  font-size: 60px;
+  display: none;
+  color: #fff;
+  cursor: pointer;
+}

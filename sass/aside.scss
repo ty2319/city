@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+.ie7,.ie8 {
+	aside h3 {
+		@include Modal;
+	}
+}
+
+aside {
+    position: $r;
+	clear: both;
+	
+	h3 {
+		@include nvh;
+	
+		i {
+			@include hi;
+			margin-left: $FS*0.4;
+		}
+	}
+		
+		dl {
+			@include nv;
+			height: $FS * 14;
+			
+			dt {
+				font-size: $FS * 1.75;
+				margin: 0.5em 0 0.5em 2em;
+				color: $white;
+				span {
+					font-size: $FS * 0.9;
+					-webkit-transform: scale(0.9);
+					margin-left: 1em;
+					font-family: century;
+				}
+			}
+		
+			dd {
+				@include nvli;
+				color: darken($white, 60%);
+				
+				span {
+					margin: 3px 1em 0 3em;
+				}
+			
+				a {
+					@include nva;
+					&:hover {
+						color: darken($white, 20%) !important;
+					}
+				}
+			}
+		}
+}

@@ -1,0 +1,261 @@
+@charset "UTF-8";
+/* CSS Document */
+#pan {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 6px;
+  width: 100%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.ie7 #pan, .ie8 #pan {
+  background-color: rgba(0, 0, 0, 0.8);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000)";
+}
+
+article {
+  width: 100%;
+  clear: both;
+  background-color: #fff;
+}
+article header#title {
+  text-align: center;
+  color: #fff !important;
+  background: center center no-repeat fixed;
+  background-size: cover;
+}
+article header#title.bg0 {
+  background-image: url(../img/common/01.jpg);
+}
+article header#title.bg1 {
+  background-image: url(../img/common/02.jpg);
+}
+article header#title.bg2 {
+  background-image: url(../img/common/03.jpg);
+}
+article header#title.bg3 {
+  background-image: url(../img/common/04.jpg);
+}
+article header#title.bg4 {
+  background-image: url(../img/common/05.jpg);
+}
+article header#title.bg5 {
+  background-image: url(../img/common/06.jpg);
+}
+article header#title.bg6 {
+  background-image: url(../img/common/07.jpg);
+}
+article header#title.bg7 {
+  background-image: url(../img/common/08.jpg);
+}
+article header#title.bg8 {
+  background-image: url(../img/common/09.jpg);
+}
+article header#title.bg9 {
+  background-image: url(../img/common/10.jpg);
+}
+article header#title.bg10 {
+  background-image: url(../img/common/11.jpg);
+}
+article header#title h3 {
+  font-size: 39px;
+  font-family: century;
+}
+article header#title p {
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+}
+article .half {
+  width: 39.95%;
+  min-width: 375.53px;
+  float: left;
+  clear: none;
+  border-color: gray;
+  border-style: dotted;
+  padding: 120px 5% !important;
+}
+article .half h5, article .half dl, article .half ul, article .half p, article .half table {
+  margin: 12px 0;
+}
+article .one_third {
+  width: 33.33333%;
+  min-width: 253.8px;
+  float: left;
+  clear: none;
+}
+article .one_third p {
+  margin: 0 24px 24px 24px;
+}
+article .one_third img {
+  width: 100%;
+  height: auto;
+}
+article .quarter {
+  width: 25%;
+  min-width: 211.5px;
+  float: left;
+  clear: none;
+  padding: 0 !important;
+}
+article .quarter h5, article .quarter dl, article .quarter p {
+  margin: 12px;
+}
+article .quarter img {
+  height: auto;
+  min-width: 187.5px !important;
+}
+article div.contents, article .double {
+  padding: 0 !important;
+  width: 100% !important;
+}
+article .double h4 {
+  margin-top: 120px;
+}
+article .double h5 {
+  margin-bottom: 60px !important;
+}
+article .double .half {
+  padding-top: 60px !important;
+}
+article section header {
+  text-align: center;
+  margin-bottom: 120px;
+  color: #012052;
+}
+article section header h4 {
+  font-size: 30px;
+  line-height: 100%;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+}
+article section header p {
+  font-family: century;
+  margin: 6px 0 0 !important;
+}
+article .contents {
+  width: 90%;
+  clear: both;
+  background: center center no-repeat fixed;
+  overflow: hidden;
+  background-size: cover;
+  padding: 120px 5%;
+}
+article .contents.bg0 {
+  background-image: url(../img/common/12.png);
+}
+article .contents.bg1 {
+  background-image: url(../img/common/13.png);
+}
+article .contents.bg2 {
+  background-image: url(../img/common/14.png);
+}
+article .contents.bg3 {
+  background-image: url(../img/common/15.png);
+}
+article .contents.bg4 {
+  background-image: url(../img/common/16.png);
+}
+article .contents.bg5 {
+  background-image: url(../img/common/17.png);
+}
+article .contents section {
+  padding: 24px 0;
+  background: none;
+}
+article .contents .back_gray, article .contents .back_gray th, article .contents .back_gray td {
+  background-color: rgba(204, 204, 204, 0.8);
+}
+article .contents .back_white, article .contents .back_white th, article .contents .back_white td {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+article .contents hr {
+  border-top: #666 1px dotted;
+  margin: 24px 0 60px 0;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+}
+article .contents h5, article .contents caption {
+  color: #012052;
+  margin-bottom: 12px;
+  padding: 6px;
+  font-size: 21px;
+  text-align: center;
+  font-weight: normal;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+}
+article .contents dl, article .contents .frame, article .contents .box {
+  padding: 12px;
+  border: #999 3px double;
+  overflow: hidden;
+  zoom: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 12px;
+}
+article .contents dt {
+  color: #012052;
+  font-weight: bold;
+  clear: both;
+  text-align: center;
+  margin-bottom: 12px;
+}
+article .contents dd {
+  overflow: hidden;
+  text-align: center;
+}
+article .contents dd a {
+  color: #2c7eff;
+}
+article .contents dd a span {
+  margin-right: 6px;
+}
+article .contents .box {
+  margin: 12px 0 0 0 !important;
+}
+article .contents .box dt {
+  float: left;
+}
+article .contents .box dd {
+  text-align: left;
+  margin-bottom: 12px;
+}
+article dfn img {
+  vertical-align: middle;
+}
+article .center {
+  text-align: center;
+}
+article .zerofive {
+  padding-top: 6px !important;
+  padding-top: 12px !important;
+}
+article .bottom {
+  padding-bottom: 12px !important;
+}
+
+.ie7 section dl, .ie7 .frame, .ie8 section dl, .ie8 .frame {
+  background-color: rgba(255, 255, 255, 0.3);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#55FFFFFF,EndColorStr=#55FFFFFF);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#55FFFFFF,EndColorStr=#55FFFFFF)";
+}
+.ie7 .border thead th, .ie7 .enemy thead th, .ie7 .b_e, .ie8 .border thead th, .ie8 .enemy thead th, .ie8 .b_e {
+  background-color: rgba(0, 0, 0, 0.8);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#66000000,EndColorStr=#66000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#66000000,EndColorStr=#66000000)";
+}
+.ie7 .back_gray, .ie7 .back_gray th, .ie7 .back_gray td, .ie8 .back_gray, .ie8 .back_gray th, .ie8 .back_gray td {
+  background-color: rgba(0, 0, 0, 0.8);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#11000000,EndColorStr=#11000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#11000000,EndColorStr=#11000000)";
+}
+.ie7 .back_white, .ie7 .back_white th, .ie7 .back_white td, .ie8 .back_white, .ie8 .back_white th, .ie8 .back_white td {
+  background-color: rgba(255, 255, 255, 0.3);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#55FFFFFF,EndColorStr=#55FFFFFF);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#55FFFFFF,EndColorStr=#55FFFFFF)";
+}

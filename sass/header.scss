@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+header#top {
+	width: $max;
+	background-color: $white;
+	overflow: hidden;
+	
+	h1 {
+		padding: 10px 0 0 10px;
+		float: left;
+	}
+
+	#topnavi {
+		font-size: $FS * 0.8;
+		float: right;
+		color: #0033cc;
+		margin: 3em 1.5em 2em 0; 
+		
+		li {
+			display: inline;
+			margin-left: $FS * 2;
+		}
+	}
+}
+
+h2 {
+	@include abT(150px,50%,2);
+	margin-left: -100px;
+	width: 180px;
+	background: none;
+}
+
+.ie7,.ie8 {
+	#global h3 {
+		@include Modal;
+	}
+}
+		
+#global {
+	position: $r;
+	
+	h3 {
+		@include nvh;
+		margin-top: -$FS*6;
+	
+		i {
+			@include hi;
+		}
+	}
+		
+	dl {
+		@include nv;
+			
+		dt {
+			font-size: $FS * 1.75;
+			margin: 0.5em 0 0.5em 2em;
+			color: $white;
+			span {
+				font-size: $FS * 0.9;
+				-webkit-transform: scale(0.9);
+				margin-left: 1em;
+				font-family: century;
+			}
+		}
+	
+		dd {
+			@include nvli;
+			margin-left: -$FS;
+			text-indent: $FS * 3;
+				
+				span {
+					margin: 3px $FS*0.8 0 0;
+				}
+				
+				i {
+					font-size: $FS;
+					font-style: normal;
+					font-family: century;
+					font-weight: normal;
+					margin-left: 1em;
+				}
+			
+				a {
+					@include nva;
+					
+					&:hover {
+						color: $blue;
+					}
+				}
+		}
+	}
+}

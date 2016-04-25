@@ -1,0 +1,162 @@
+/* CSS Document */
+.tail .half, .head .half {
+  padding-top: 0 !important;
+  margin-left: -76%;
+  width: 42%;
+  min-width: 355.32px;
+  overflow: hidden;
+  text-align: center;
+}
+.tail .half h5, .head .half h5 {
+  margin: 0;
+}
+.tail .half div section, .head .half div section {
+  margin-top: 12px;
+  float: left;
+  clear: none;
+}
+.tail .half div section h6, .head .half div section h6 {
+  float: none;
+}
+.tail .half ul, .head .half ul {
+  clear: both;
+}
+.tail .half ul .prev, .head .half ul .prev {
+  float: left;
+  margin-left: -36px;
+  display: none;
+  margin-top: -480px;
+}
+.tail .half ul .next, .head .half ul .next {
+  float: right;
+  margin-right: -36px;
+  margin-top: -480px;
+}
+.tail .half ul a, .head .half ul a {
+  color: #012052;
+}
+.tail .half ul a:hover, .head .half ul a:hover {
+  color: #035be9;
+}
+
+table {
+  border-collapse: collapse;
+  border: #b3b3b3 solid 1px;
+  width: 100%;
+}
+table.quarter {
+  width: 24%;
+  min-width: 203.04px;
+}
+table caption span {
+  font-size: 15px;
+}
+table thead th {
+  background-color: rgba(77, 77, 77, 0.8);
+  color: #fff;
+}
+table th, table td {
+  border-right: #b3b3b3 dotted 1px;
+  padding: 8.4px 6px;
+  text-align: center;
+  width: auto;
+}
+table.battery {
+  border: none;
+  width: auto;
+  border-collapse: separate;
+  border-spacing: 0 6px;
+  margin-bottom: 60px !important;
+}
+table.battery th, table.battery td {
+  border: none;
+  text-align: left;
+  padding: 4.8px;
+  line-height: 100%;
+}
+table.battery .b_n {
+  background-color: rgba(44, 126, 255, 0.8);
+  color: #fff;
+}
+table.battery .b_e {
+  background-color: rgba(77, 77, 77, 0.8);
+  color: #fff;
+}
+table.score thead th {
+  background-color: rgba(1, 32, 82, 0.7);
+}
+table .current {
+  background-color: rgba(26, 26, 26, 0.8) !important;
+  font-weight: bold;
+}
+table .current a {
+  color: #fff;
+}
+table.blue caption {
+  color: #2c7eff !important;
+}
+table.blue thead th {
+  background-color: rgba(44, 126, 255, 0.8);
+}
+table.border caption {
+  color: #666666 !important;
+}
+table .back_blue th, table .back_blue td {
+  background-color: rgba(223, 235, 255, 0.8);
+}
+
+.ntt thead th {
+  background-color: rgba(44, 126, 255, 0.8);
+  color: #FFF;
+}
+
+.enemy thead th {
+  background-color: rgba(77, 77, 77, 0.8);
+  color: #FFF;
+}
+
+figure {
+  font-size: 10.8px;
+  line-height: 15px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+figure figcaption {
+  margin-top: 6px;
+}
+
+.one_third {
+  width: 23.26667% !important;
+  min-width: 218px !important;
+  padding: 24px 5% 60px 5% !important;
+  border-color: gray;
+  border-style: dotted;
+}
+.one_third p {
+  overflow: hidden;
+  text-align: left;
+  margin: 24px 0 !important;
+  padding: 0;
+  zoom: 1;
+  background: url(/symbol/hp/baseball/games/2016/city/img/mascot/line.gif) left 55px;
+  line-height: 28px;
+}
+
+.ie7 .back_blue th, .ie7 .back_blue td, .ie8 .back_blue th, .ie8 .back_blue td {
+  background-color: rgba(44, 126, 255, 0.8);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#222c7eff,EndColorStr=#222c7eff);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#222c7eff,EndColorStr=#222c7eff)";
+}
+.ie7 .blue thead th, .ie7 .ntt thead th, .ie7 .b_n, .ie8 .blue thead th, .ie8 .ntt thead th, .ie8 .b_n {
+  background-color: rgba(44, 126, 255, 0.8);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#992c7eff,EndColorStr=#992c7eff);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#992c7eff,EndColorStr=#992c7eff)";
+}
+.ie7 .current, .ie8 .current {
+  background-color: #454545 !important;
+}
+.ie7 .score thead th, .ie8 .score thead th {
+  background-color: rgba(44, 126, 255, 0.8);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#77012052,EndColorStr=#77012052);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#77012052,EndColorStr=#77012052)";
+}

@@ -1,0 +1,26 @@
+/* CSS Document */
+#side {
+  position: fixed;
+  bottom: 35%;
+  right: 0;
+  z-index: 3;
+  right: 6px;
+  text-align: right;
+  font-size: 15px;
+  display: none;
+}
+#side li {
+  list-style: none;
+  line-height: 24px;
+}
+#side li a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 0.2em;
+}
+#side li a span {
+  display: none;
+}
+#side .on, #side .on a {
+  color: #2c7eff;
+}

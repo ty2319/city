@@ -1,0 +1,320 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+#pan {
+	display: none;
+	@include fixT(0,0,2);
+	padding: $FS / 2;
+	width: $max;
+	color: $white;
+	background-color: $modal;
+}
+
+.ie7,.ie8 {
+	#pan {
+		@include Modal;
+	}
+}
+
+article {
+	width: $max;
+	clear: both;
+	background-color: $white;
+	
+		header#title {
+			text-align: center;
+			color: $white !important;
+			background: center center no-repeat fixed;
+			background-size: cover;
+			
+			&.bg0 {
+				background-image: url(#{$ip}common/01.jpg);
+			}
+			
+			&.bg1 {
+				background-image: url(#{$ip}common/02.jpg);
+			}
+			
+			&.bg2 {
+				background-image: url(#{$ip}common/03.jpg);
+			}
+			
+			&.bg3 {
+				background-image: url(#{$ip}common/04.jpg);
+			}
+			
+			&.bg4 {
+				background-image: url(#{$ip}common/05.jpg);
+			}
+			
+			&.bg5 {
+				background-image: url(#{$ip}common/06.jpg);
+			}
+			
+			&.bg6 {
+				background-image: url(#{$ip}common/07.jpg);
+			}
+			
+			&.bg7 {
+				background-image: url(#{$ip}common/08.jpg);
+			}
+			
+			&.bg8 {
+				background-image: url(#{$ip}common/09.jpg);
+			}
+			
+			&.bg9 {
+				background-image: url(#{$ip}common/10.jpg);
+			}
+			
+			&.bg10 {
+				background-image: url(#{$ip}common/11.jpg);
+			}
+				
+			h3 {
+				font-size: $FS*3.25;
+				font-family: century;
+			}
+		
+			p {
+				margin-top: $FS*1.5;
+				font-size: $FS*1.5;
+				font-weight: normal;
+				font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+			}
+		}
+		
+	.half {
+		width: $max * 0.3995;
+		min-width: $nf * 0.3995;
+		float: left;
+		clear: none;
+		border-color: lighten($black,50%);
+		border-style: dotted;
+		padding: $FS*10 $max*0.05 !important;
+	
+		h5,dl,ul,p,table {
+			margin: $FS 0;
+		}
+	}
+		
+	.one_third {
+		width: $max / 3;
+		min-width: $nf * 0.27;
+		float: left;
+		clear: none;
+		
+		p {
+			margin: 0 $FS*2 $FS*2 $FS*2;
+		}
+		
+		img {
+			width: $max;
+			height: auto;
+		}
+	}
+	
+	.quarter {
+		width: $max / 4;
+		min-width: $nf*0.9 / 4;
+		float: left;
+		clear: none;
+		padding: 0 !important;
+		
+		h5,dl,p {
+			margin: $FS;
+		}
+		
+		img {
+			height: auto;
+			min-width: 187.5px !important;
+		}
+	}
+	
+	div.contents,.double {
+		padding: 0 !important;
+		width: $max !important;
+	}
+	
+	.double {
+		
+		h4 {
+			margin-top: $FS*10;
+		}
+		
+		h5 {
+			margin-bottom: $FS*5 !important;
+		}
+		
+		.half {
+			padding-top: $FS*5 !important;
+		}
+	}
+		
+	section header {
+		text-align: center;
+		margin-bottom: $FS * 10;
+		color: $navy;
+		
+		h4 {
+			font-size: $FS * 2.5;
+			line-height: $max;
+			font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+		}
+		
+		p {
+			font-family: century;
+			margin: $FS/2 0 0 !important;
+		}
+	}
+
+	.contents {
+		width: $max * 0.9;
+		clear: both;
+		background: center center no-repeat fixed;
+		overflow: hidden;
+		background-size: cover;
+		padding: $FS*10 $max*0.05;
+		
+		&.bg0 {
+			background-image: url(#{$ip}common/12.png);
+		}
+		
+		&.bg1 {
+			background-image: url(#{$ip}common/13.png);
+		}
+		
+		&.bg2 {
+			background-image: url(#{$ip}common/14.png);
+		}
+		
+		&.bg3 {
+			background-image: url(#{$ip}common/15.png);
+		}
+			
+		&.bg4 {
+			background-image: url(#{$ip}common/16.png);
+		}
+		
+		&.bg5 {
+			background-image: url(#{$ip}common/17.png);
+		}
+		
+		section {
+			padding: $FS*2 0;
+			background: none;
+			
+		}
+	
+		.back_gray,.back_gray th,.back_gray td {
+			background-color: lighten($modal,80%);
+		}
+	
+		.back_white,.back_white th,.back_white td {
+			background-color: lighten($modal2,80%);
+		}
+
+		hr {
+			border-top: #666 1px dotted;
+			margin: $FS*2 0 $FS*5 0;
+			height: 0;
+			clear: both;
+			overflow: hidden;
+		}
+				
+		h5,caption {
+			color: $navy;
+			margin-bottom: $FS;
+			padding: $FS / 2;
+			font-size: $FS*1.75;
+			text-align: center;
+			font-weight: normal;
+			font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+		}
+		
+		dl,.frame,.box {
+			padding: $FS;
+			border: #999 3px double;
+			overflow: hidden;
+			zoom: 1;
+			background-color: $modal2;
+			margin: $FS;
+		}
+						
+		dt {
+			color: $navy;
+			font-weight: bold;
+			clear: both;
+			text-align: center;
+			margin-bottom: $FS;
+		}
+			
+		dd {
+			overflow: hidden;
+			text-align: center;
+			
+			a {
+				color: $blue;
+				
+				span {
+					margin-right: $FS/2;
+				}
+			}
+		}
+		
+		.box {
+			margin: $FS 0 0 0 !important;
+			
+			dt {
+				float: left;
+			}
+		
+			dd {
+				text-align: left;
+				margin-bottom: $FS;
+			}
+		}
+	}
+	
+	dfn img {
+		vertical-align: middle;
+	}
+		
+	.center {
+		text-align: center;
+	}	
+	
+	.zerofive {
+		padding-top: $FS/2 !important;
+		padding-top: $FS !important;
+	}
+	
+	.bottom {
+		padding-bottom: $FS !important;
+	}
+}
+
+.ie7,.ie8 {
+	
+	section dl,.frame {
+		@include Modal2;
+	}
+	
+	.border thead th,.enemy thead th,.b_e {
+		background-color: $modal;
+		filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#66000000,EndColorStr=#66000000);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#66000000,EndColorStr=#66000000)";
+	}
+
+	.back_gray,.back_gray th,.back_gray td {
+		background-color: $modal;
+		filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#11000000,EndColorStr=#11000000);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#11000000,EndColorStr=#11000000)";
+	}
+
+	.back_white,.back_white th,.back_white td {
+		@include Modal2;
+	}
+}

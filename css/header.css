@@ -1,0 +1,115 @@
+/* CSS Document */
+#global h3, #global dl {
+  position: fixed;
+  top: 50%;
+  left: 0;
+}
+
+header#top {
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+header#top h1 {
+  padding: 10px 0 0 10px;
+  float: left;
+}
+header#top #topnavi {
+  font-size: 9.6px;
+  float: right;
+  color: #0033cc;
+  margin: 3em 1.5em 2em 0;
+}
+header#top #topnavi li {
+  display: inline;
+  margin-left: 24px;
+}
+
+h2 {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  z-index: 2;
+  margin-left: -100px;
+  width: 180px;
+  background: none;
+}
+
+.ie7 #global h3, .ie8 #global h3 {
+  background-color: rgba(0, 0, 0, 0.8);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000)";
+}
+
+#global {
+  position: relative;
+}
+#global h3 {
+  z-index: 4;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  background-color: rgba(26, 26, 26, 0.8);
+  margin-left: 12px;
+  padding: 6px 0;
+  font-family: century;
+  font-size: 15px;
+  width: 60px;
+  text-align: center;
+  margin-top: -72px;
+}
+#global h3 i {
+  display: block !important;
+  font-size: 30px !important;
+  color: #fff;
+}
+#global dl {
+  z-index: 4;
+  height: 222px;
+  width: 100%;
+  margin: -7em 0 0 0;
+  padding: 1.25em 0 0;
+  display: none;
+  background-color: #000;
+}
+#global dl dt {
+  font-size: 21px;
+  margin: 0.5em 0 0.5em 2em;
+  color: #fff;
+}
+#global dl dt span {
+  font-size: 10.8px;
+  -webkit-transform: scale(0.9);
+  margin-left: 1em;
+  font-family: century;
+}
+#global dl dd {
+  color: #666666;
+  font-size: 15px;
+  line-height: 27px;
+  margin-left: -12px;
+  text-indent: 36px;
+}
+#global dl dd span {
+  margin: 3px 9.6px 0 0;
+}
+#global dl dd i {
+  font-size: 12px;
+  font-style: normal;
+  font-family: century;
+  font-weight: normal;
+  margin-left: 1em;
+}
+#global dl dd a {
+  color: #fff;
+}
+#global dl dd a.active {
+  color: #2c7eff;
+  text-decoration: line-through;
+}
+#global dl dd a:hover {
+  color: #92bcff;
+}
+#global dl dd a:hover {
+  color: #2c7eff;
+}
