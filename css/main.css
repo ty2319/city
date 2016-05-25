@@ -12,12 +12,6 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.ie7 #pan, .ie8 #pan {
-  background-color: rgba(0, 0, 0, 0.8);
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000)";
-}
-
 article {
   width: 100%;
   clear: both;

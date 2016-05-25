@@ -3,293 +3,233 @@
 
 @import "settings";
 
-h2 {
-	@include abT(35%,5%,2);
-}
+html {
+	min-height: 600px;
+	overflow: hidden;
 
-#global {
-	
-	 h3 {
-		top: $max * 0.6;
-		left: $max / 2;
-		margin: 0 0 0 -80px;
-		background: none;
-	}
-	
-	dl {
-		top: $max * 0.55;
-	}
-}
-
-aside {
-	
-	 h3 {
-		top: $max * 0.6;
-		left: $max / 2;
-		margin-left: 20px;
-		background: none;
-	}
-	
-	dl {
-		top: $max * 0.6;
-	}
-	
-}
-
-article {
-	overflow: hidden !important;
-	
-	#button {
-		@include abB(5%,5%,5);
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: flex-start;
-		align-items: stretch;
-	
-		li {
-			background-color: $black;
-			color: $white;
-			text-align: center;
-			cursor: pointer;
-			font-weight: bold;
-			min-width: 50px;
-			min-height: 50px;
-			margin-left: 1px;
-			opacity: .7;
-		}
+	header#top {
+		position: $r;
+		z-index: 2;
 	}
 	
 	#back {
 		@include abT(0,0,1);
-		width: $max;
-		height: $max;
 		overflow: hidden;
 		
 		div {
+			background: url(../img/top/4.jpg), url(../img/top/0.jpg), url(../img/top/1.jpg), url(../img/top/2.jpg), url(../img/top/3.jpg) no-repeat center center;
+			background-size: cover;
 			width: $max;
 			height: $max;
-			background: url(img/1.jpg) no-repeat center center;
-			background-size: cover;
 			
 			&.inner {
 				transform: scale(1.5 , 1.5) rotate(15deg);
 				transition: all 30s ease 0.5s;
-				z-index: 1;
 			}
 		}
 	}
 	
+		
 	main {
 		@include abT(0,0,1);
-		width: $max;
-		height: $max;
+		overflow: hidden !important;
+		background: url(../img/top/dot.png);
 		
 		&>div {
-			@include abT(0,0,2);
+			position:absolute;
 			background-color: $black;
 		}
-	}
-
-	section {
-		@include abB(0,5%,3);
-		color: $white;
-		display: none;
-		min-width: 203px;
 		
-		 header {
-			width: $max;
+		article {
+			background: none;
 			height: $max;
-			text-align: center;
-			color: #fff;
-			cursor: pointer;
-			background: center top no-repeat;
-			background-size: cover;
-			
-			h3 {
-				margin: 0 $FS/2 $FS/2;
-				padding-bottom: $FS/2;
-				border-bottom: #FFF 1px solid;
+			border-right: $max*0.05 rgba($black,80%) solid;
+		
+			#button {
+				@include abB(7%,0,10);
 				font-family: century;
-				font-size: $FS * 1.5;
-			}
-		
-			p {
-				font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
-				font-size: $FS * 1.25;
-			}
-		}
-		
-		p {
-			margin-top: $FS * 2 !important;
-		}
-		
-		section {
-			padding: 0;
-			width: $max;
-			display: none;
-			position: $r;
-			background: center $max*0.2 no-repeat scroll;
-			background-size: cover;
-			left: 0;
-			top: 0;
-			color: #fff;
-			z-index: 5;
 			
-			header {
-				height: auto;
-				cursor: auto;
-				border-top: #fff 3px double;
-				border-bottom: #fff 3px double;
-				margin: 280px 0 0;
-				padding: $FS*1.5 $FS/2;
-		
-				p {
-					font-size: $FS * 1.1;
-				}
-			}
-			
-			h4 {
-				font-family: century;
-			}
-			
-			.r {
-				margin: 0 $max*0.1 0 $max*0.6;
-				padding: $max * 0.02;
-				background: url(#{$ip}common/logo.png) no-repeat center 50px;
-				display: none;
-				overflow: auto;
-			}
-			
-			.l {
-				margin: 0 $max*0.6 0 $max*0.1;
-				padding: $max * 0.02;
-				background: url(#{$ip}common/logo.png) no-repeat center 50px;
-				display: none;
-				overflow: auto;
-			}
-			
-			p a,li a {
-				color: lighten($black,20%);
-				display: block;
-				margin-top: $FS;
-				padding: $FS;
-				font-size: $FS * 1.25;
-				text-align: center;
-				opacity: 0.8;
-				overflow: hidden;
-				&:hover {
-					opacity: 1;
-				}
-			}
-			
-			dl {
-				background: none;
-				border: none;
-				margin: 0 !important;
-				padding: $FS 0 0 !important;
-				
-				dt {
+				li {
+					background-color: $black;
 					color: $white;
-					float: left;
-					width: 7em;
-					text-align: left;
-					padding-top: $FS
-				}
-				
-				dd {
-					margin: 0 !important;
-					padding: $FS 0 $FS 7em;
-					overflow: visible;
-					text-align: left;
+					text-align: center;
+					cursor: pointer;
+					min-width: 50px;
+					min-height: 50px;
+					margin-bottom: 1px;
+					padding-top: $max * 0.4;
+					opacity: .8;
+					font-size: 0.9rem;
+					font-weight: bold;
+					
+					&.on {
+						background-color: $navy;
+					}
 				}
 			}
-		}
 			
-		.close {
-			@include abT(70px,93%,6);
-			display: none;
-			font-size: $FS * 6;
-			color: #fff;
-			cursor: pointer;
-			padding: $FS;
-		}
-		
-		&#news {
-			width: $nf !important;
-			height: $FS * 3 !important;
-			margin-left: -530px;
-			padding: $FS 0 0 120px;
-			display: block;
-			@include abT(80px,50%,0);
-			float: none;
-			clear: left;
-			overflow: hidden !important;
-			background: none !important;
-			
-				h3 {
-					width: $FS * 5 !important;
-					background-color: $white;
-					color: lighten($black, 20%);
-					font-weight: bold;
-					text-align: center;
-					float: left;
-					font-size: $FS * 1.3;
-					@include abT($FS,0,3);
-					font-family: century;
+			section {
+				color: $white;
+				display: none;
+				min-width: 203px;
+				padding: 0 !important;
+				background: none !important;
+				overflow: auto;
+				height: $max;
+				line-height: 1.75rem;
+				
+				header {
+					@include abB(48%,27%,3);
+					width: $max * 0.1 !important;
+					color: #fff;
+					margin: 0;
+					
+					h3 {
+						font-family: century;
+						font-size: 1.25rem;
+					}
+				
+					p {
+						font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+						font-size: 0.9rem;
+					}
 				}
 				
-				ul {
-					position: $r;
+				div.tse-scrollable {
+					@include abB(8.6%,8.1%,10);
+					width: $max * 0.18;
+					overflow: hidden;
+									
+					.close {
+						font-size: 2.5rem;
+						color: #fff;
+						cursor: pointer;
+						text-align: right;
+						margin-bottom: 1rem;
+					}
+					
+					p a,li a {
+						color: lighten($black,20%);
+						background-color: $white;
+						display: block;
+						margin-top: 1rem;
+						padding: 0.5rem;
+						text-align: center;
+						opacity: 0.8;
+						overflow: hidden;
 						
-						li {
-							width: 820px;
-							color: $white;
+						&:hover {
+							opacity: 1;
+						}
+					}
+					
+					dl {
+						background: none !important;
+						border: none !important;
+						margin: 0 !important;
+						padding: 0 !important;
+						
+						dt {
+							color: $white !important;
+						}
+						
+						dd {
+							margin: 0 0 1rem 0;
+							padding: 0 0 1rem 0;
+							border-bottom: $white 1px dotted;
 							
-							a {
-								color: $white;
-								display: inline;
-								margin: 0 $FS/2 0 0;
-								padding: 0;
-								font-size: $FS;
-								text-align: left;
-								opacity: 1;
-								text-decoration: underline;
+							&:last-of-type {
+								border: none;
 							}
 						}
-						
-						&.pager {
-							display: none;
-						}
+					}
 				}
-				
-			.prev {
-				@include abT($FS*1.35,70px,100);
-				cursor: pointer;
-				color: $white;
-			}
-				
-			.next {
-				@include abT($FS*1.35,90px,100);
-				cursor: pointer;
-				color: $white;
 			}
 		}
-	}	
-}
-
-#live {
-	@include abT(80%,50%,1);
-	margin-left: -139px;
-}
-
-#hero {
-	@include abT(75%,50%,1);
-	margin-left: -80px;
-}
-
-.ie7,.ie8 {
-	section dl {
-		filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#00FFFFFF,EndColorStr=#00FFFFFF);
-		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#00FFFFFF,EndColorStr=#00FFFFFF)";
+	}
+		
+	#news {
+		@include abT(5.4rem,65%,6);
+		width: $max * 0.455;
+		background: none !important;
+		overflow: hidden;
+		
+		@include media($of) {
+			@include abT(11rem,1rem,3);
+			width: $max;
+		}
+		
+		h3 {
+			width: $max * 0.1;
+			padding: 0.2rem 0;
+			background-color: $white;
+			color: lighten($black, 20%);
+			font-weight: bold;
+			text-align: center;
+			font-family: century;
+			display: inline-block;
+			vertical-align: top;
+		
+			@include media($of) {
+				width: $max * 0.05;
+			}
+		}
+			
+		#prev,#next {
+			display: inline-block;
+			margin-left: 1rem;
+			cursor: pointer;
+			color: $white;
+			font-size: 1.5rem;
+		}
+		
+		#prev {
+			display: none;
+		}
+		
+		div {
+			width: $max;
+			background: none !important;
+			padding: 0;
+				
+			@include media($of) {
+				margin: -1.7rem 0 0 12rem;
+			}
+		
+			ul {
+				margin-top: 0.5rem;
+				display: table;
+					
+				li {
+					display: table-cell;
+					color: $white;
+					
+					@include media($of) {
+						width: $max;
+					}
+					
+					a {
+						color: $white;
+						margin: 0 0.5rem 0 0;
+						padding: 0;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	
+	#vs {
+		@include abT(55%,3%,10);
+		display: block;
+	}
+	
+	#live {
+		display: none;
+	}
+	
+	#hero {
+		@include abT(75%,50%,1);
+		margin-left: -80px;
 	}
 }

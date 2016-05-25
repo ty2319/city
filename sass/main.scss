@@ -12,12 +12,6 @@
 	background-color: $modal;
 }
 
-.ie7,.ie8 {
-	#pan {
-		@include Modal;
-	}
-}
-
 article {
 	width: $max;
 	clear: both;
