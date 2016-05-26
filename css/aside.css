@@ -1,14 +1,8 @@
 /* CSS Document */
 aside h3, aside dl {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 0;
-}
-
-.ie7 aside h3, .ie8 aside h3 {
-  background-color: rgba(0, 0, 0, 0.8);
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#88000000,EndColorStr=#88000000)";
 }
 
 aside {
@@ -27,42 +21,43 @@ aside h3 {
   font-size: 15px;
   width: 60px;
   text-align: center;
+  left: 22%;
 }
 aside h3 i {
   display: block !important;
   font-size: 30px !important;
   color: #fff;
-  margin-left: 4.8px;
+  margin-left: 0.4rem;
 }
 aside dl {
   z-index: 4;
-  height: 222px;
   width: 100%;
-  margin: -7em 0 0 0;
-  padding: 1.25em 0 0;
+  height: 18rem;
+  margin: -7rem 0 0 0;
+  padding: 1.25rem 0;
   display: none;
   background-color: #000;
-  height: 168px;
+  height: 14rem;
 }
 aside dl dt {
-  font-size: 21px;
-  margin: 0.5em 0 0.5em 2em;
+  font-size: 1.5rem;
+  margin: 0.5rem 0 1rem 2rem;
   color: #fff;
 }
 aside dl dt span {
-  font-size: 10.8px;
+  font-size: 0.9rem;
   -webkit-transform: scale(0.9);
-  margin-left: 1em;
+  margin-left: 1rem;
   font-family: century;
 }
 aside dl dd {
   color: #666666;
-  font-size: 15px;
-  line-height: 27px;
+  line-height: 100%;
+  margin-bottom: 1rem;
   color: #666666;
 }
 aside dl dd span {
-  margin: 3px 1em 0 3em;
+  margin: 3px 1rem 0 3rem;
 }
 aside dl dd a {
   color: #fff;

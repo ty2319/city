@@ -31,7 +31,7 @@
 		$('#side li a').append(' ●');
 		$('.box dt').not('#issues dt').append('：');
 		$('.dot dd').prepend('・');
-		$('#global dt,aside dt,article h5').prepend('―　').append('　―');
+		$('article h5').prepend('―　').append('　―');
 	},
 	
 	section = function() {
@@ -53,15 +53,6 @@
 	},
 	
 	font = function() {
-		var w = $(window).width();
-		var x = 1330;
-		var minx = 940;
-			if (w >= x) {
-				$('article').not($('#minimal').parent('article')).css({'font-size':'120%','line-height':'170%'});
-			} else if (w < x) {				
-				$('article').css({'font-size':'100%','line-height':'150%'});
-			}
-		
 		$('.contents').each(function() {
             $('.half:odd' , this).css('border-left-width' , $(window).width() * 0.001);
         });
@@ -102,77 +93,63 @@
 		
 		path = location.pathname
 		if(path.match("index")){
-			$('nav#global a').eq(0).addClass('active');
-	　　}
-		if(path.match("tournament")){
-			$('nav#global a').eq(1).addClass('active');
-	　　}
-		if(path.match("results")){
-			$('nav#global a').eq(2).addClass('active');
-	　　}
-		if(path.match("gallery")){
-			$('nav#global a').eq(3).addClass('active');
-	　　}
-		if(path.match("aid")){
 			$('nav#global a').eq(4).addClass('active');
 	　　}
-		if(path.match("access")){
+		if(path.match("tournament")){
 			$('nav#global a').eq(5).addClass('active');
 	　　}
-		if(path.match("hero")){
+		if(path.match("results")){
 			$('nav#global a').eq(6).addClass('active');
 	　　}
-		if(path.match("mascot")){
+		if(path.match("gallery")){
 			$('nav#global a').eq(7).addClass('active');
 	　　}
-		if(path.match("history")){
+		if(path.match("aid")){
 			$('nav#global a').eq(8).addClass('active');
 	　　}
-		if(path.match("past")){
+		if(path.match("access")){
 			$('nav#global a').eq(9).addClass('active');
 	　　}
-
-		$('#global h3').hover(function() {
-			$('#global dl').slideDown('fast');
-			$(this).hide();
-			$('aside').hide();
-			$('body').append('<div id="modal"></div>');
-		});
+		if(path.match("hero")){
+			$('nav#global a').eq(10).addClass('active');
+	　　}
+		if(path.match("mascot")){
+			$('nav#global a').eq(11).addClass('active');
+	　　}
+		if(path.match("history")){
+			$('nav#global a').eq(12).addClass('active');
+	　　}
+		if(path.match("past")){
+			$('nav#global a').eq(13).addClass('active');
+	　　}
 	
-		$('aside h3').hover(function() {
-			$('aside dl').slideDown('fast');
-			$(this).hide();
-			$('#global').hide();
-			$('body').append('<div id="modal"></div>');
+		$('#global ul:first a').each(function(i) {
+			$(this).addClass('link' + i);
+			$($(this).attr("href")).addClass('link' + i);
+			
+			$('.link' + i).hover(function() {
+				$('#global ul:first a.link' + i).parent().addClass('on').siblings().removeClass('on');
+				$('#global ul:not(:first)').not('.link' + i).stop().slideUp(500);
+				$('#global ul.link' + i).stop().slideDown(500 , function() {
+					$(this).css('display' , 'table');
+					$(this).children().css('opacity' , 1);
+				});
+			}, function() {
+				$('#global ul.link' + i).children().css('opacity' , 0);
+				$('#global ul.link' + i).css('display' , 'block');
+				$('#global ul.link' + i).stop().slideUp(500);
+				$('#global ul:first a.link' + i).parent().removeClass('on');
+			});
 		});
-	
-		$('#global dl').hover(function() {
-			$(this).show();
-		}, function() {
-			$('div#modal').remove();
-			$(this).slideUp('fast');
-			$('#global h3').show();
-			$('aside').show();
-		});
-	
-		$('aside dl').hover(function() {
-			$(this).show();
-		}, function() {
-			$('div#modal').remove();
-			$(this).slideUp('fast');
-			$('aside h3').show();
-			$('#global').show();
-		});
-		
-		$('#global dt:eq(1)').css({'margin-top':'-9.21em'/*'-6.4em'*/,'margin-left':'20em'});
-		$('#global dd:gt(5)').css('margin-left','25em');
 	},
 	
 	//title
 	title = function() {
 		
+		$('h2').css('margin-top', $(window).height()/2.3);
+		
 		$('header#title').height($(window).height() - $('header#top').height());
-		$('header#title h3').css('padding-top', $(window).height()/2.1)
+		$('header#title h3').css('padding-top', $(window).height()/2.1);
 		$('header#title #scroll').css({'padding-top' :  $('header#title').height()/3.5 , 'cursor' : 'pointer'});
 		$('header#title #scroll').click(function() {
 			$("html, body").stop().animate({scrollTop: $(window).height()}, 500, "linear");
