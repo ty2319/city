@@ -112,3 +112,10 @@ header#top #topnavi li {
   display: block;
   margin-top: 0.3rem;
 }
+#global #live {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 1;
+  width: 20%;
+}
