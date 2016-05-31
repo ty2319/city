@@ -35,13 +35,12 @@
 	},
 	
 	section = function() {
-		$('header#title').append('<p id="scroll">scroll</p><span class="fa fa-angle-down fa-3x"></span>');
 		
         $('section .quarter:nth-child(8n),section .quarter:nth-child(8n-2),section .quarter:nth-child(8n-3),section .quarter:nth-child(8n-5)').not('table').addClass('back_gray');
 		
         $('section .quarter:nth-child(8n+1),section .quarter:nth-child(8n-1),section .quarter:nth-child(8n-4),section .quarter:nth-child(8n-6)').not('table').addClass('back_white');
 		
-		$('article').children('section:not(.half,.one_third,.quarter,#index section),div:not(#index section div)').addClass('contents');
+		$('article').children('section:not(.half,.one_third,.quarter),div').addClass('contents');
 		
 		$('.contents:odd').css('background-color','#e9f2ff');
 		$('.contents:even').css('background-color','#FFFFFF');
@@ -146,18 +145,10 @@
 	//title
 	title = function() {
 		
-		$('h2').css('margin-top', $(window).height()/2.3);
+		var A = Math.floor(11*Math.random());
+		$('body').addClass('bg'+A);
 		
-		$('header#title').height($(window).height() - $('header#top').height());
-		$('header#title h3').css('padding-top', $(window).height()/2.1);
-		$('header#title #scroll').css({'padding-top' :  $('header#title').height()/3.5 , 'cursor' : 'pointer'});
-		$('header#title #scroll').click(function() {
-			$("html, body").stop().animate({scrollTop: $(window).height()}, 500, "linear");
-		});
-		
-		var A = 
-		Math.floor(11*Math.random());
-		$('article header#title').addClass('bg'+A);
+		$('header#title').addClass('load');
 
 	},
 	
@@ -178,16 +169,8 @@
 		var boxTop = new Array;
 		var current = -1;
 		var startPosition = 0;
-		var x = 0;
+		var navtop = $('#global').offset().top;
 		
-		$(document).mousemove(function(e) {
-			x = e.pageX;
-		});
-		
-		$(document).mousedown(function(f) {
-			x = f.pageX;
-		});
-	
 		//各要素の位置
 		$(window).on("load resize", function(){
 			$('article > section,article > div').each(function(i) {
@@ -202,26 +185,30 @@
 			var scrollPosition = $(window).scrollTop();			
 				
 			for (var i = boxTop.length - 1 ; i >= 0; i--) {
-				if (scrollPosition > boxTop[i] - set) {
+				if (scrollPosition >= boxTop[i] - set) {
 					$('#pan').slideDown('slow');
 					$('#side').fadeIn('slow');
+								
 					changeBox(i);
 					break;
 				} else if (scrollPosition < boxTop[0] - set) {
 					$('#pan').slideUp('slow');
 					$('#side').fadeOut('slow');
-					
-					if (x <= $(window).width()) {
-						if (startPosition < scrollPosition && scrollPosition < 200) {
-							$("html, body").stop().animate({scrollTop: $(window).height()}, 500, "linear");
-						}
-						
-						if (startPosition > scrollPosition && scrollPosition < boxTop[0] - 1) {
-							$("html, body").stop().animate({scrollTop: 0}, 100, "linear");
-						}
-					}
 				}
 			};
+			
+			if (navtop <= scrollPosition) {
+				$('#global').addClass('fix');
+			} else {
+				$('#global').removeClass('fix');
+			}
+					
+			if (scrollPosition >= $(document).height() - $(window).height() - $('footer ul').height()) {
+				$('#pan').css('position' , 'absolute');
+			} else {
+				$('#pan').css('position' , 'fixed');
+			}
+			
 			startPosition = scrollPosition;
 		});
 		

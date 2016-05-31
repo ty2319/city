@@ -50,7 +50,7 @@ html main article #button {
   font-family: century;
 }
 html main article #button li {
-  background-color: #000;
+  background-color: #012052;
   color: #fff;
   text-align: center;
   cursor: pointer;
@@ -63,7 +63,7 @@ html main article #button li {
   font-weight: bold;
 }
 html main article #button li.on {
-  background-color: #012052;
+  background-color: #000;
 }
 html main article section {
   color: #fff;
@@ -213,12 +213,9 @@ html #news div ul li a {
 html #vs {
   position: absolute;
   top: 65%;
-  left: 2%;
+  left: 0;
   z-index: 10;
   display: block;
-}
-html #live {
-  display: none;
 }
 html #hero {
   position: absolute;

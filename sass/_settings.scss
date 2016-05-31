@@ -6,6 +6,8 @@ $fh: 500px;
 
 $nf: 940px;
 
+$ot: 1200px;
+
 $of: 1500px;
 
 $FS: 12px;
@@ -179,6 +181,12 @@ $ip: '../img/';
   
   @else if $mediaSize <= $nf{
     @media all and (max-width: $nf) {
+      @content
+    }
+  }
+  
+  @else if $mediaSize <= $ot{
+    @media all and (max-width: $ot) {
       @content
     }
   }

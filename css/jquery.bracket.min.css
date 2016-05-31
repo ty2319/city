@@ -75,7 +75,6 @@ div.jQBracket{
 		}
 		
 		div.jQBracket .team input {
-			font-size: 12px;
 			padding: 0;
 			width: inherit;
 			border: 0;
@@ -83,10 +82,12 @@ div.jQBracket{
 		}
 		
 		div.jQBracket .team div.label {
+			font-size: 12px;
 			padding: 5px;
 			position: absolute;
-			width: 108px;
-			height: 22px;
+			width: 118px;
+			height: 32px;
+			line-height: 20px;
 			white-space: nowrap;
 			overflow: hidden;
 		}
@@ -100,7 +101,7 @@ div.jQBracket{
 				padding: 5px;
 				background-color: rgba(255,255,255,.3);
 				text-align: center;
-				width: 20px;
+				width: 30px;
 			}
 			
 				div.jQBracket .team div.score[disabled] {
@@ -228,7 +229,7 @@ div.jQBracket{
 		right: -35px;
 		position: absolute;
 		text-align: center;
-		font-size: 11px;
+		font-size: 11px !important;
 	}
 	
 		div.jQBracket .bubble.third {
@@ -376,6 +377,6 @@ div.jQBracket{
 					border-left-color: #ccc;
 				}
 
-i {
-	font-size: 10px;
+div i {
+	font-size: 10px !important;
 }

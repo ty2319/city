@@ -3,78 +3,43 @@
 
 @import "settings";
 
-#pan {
-	display: none;
-	@include fixT(0,0,2);
-	padding: $FS / 2;
-	width: $max;
-	color: $white;
-	background-color: $modal;
-}
-
 article {
 	width: $max;
 	clear: both;
-	background-color: $white;
+	position: $r;
+
+	#pan {
+		display: none;
+		@include fixB(0,0,20);
+		padding: 0.5rem;
+		width: $max;
+		color: $white;
+		background-color: $modal4;
+	}
 	
 		header#title {
 			text-align: center;
 			color: $white !important;
-			background: center center no-repeat fixed;
-			background-size: cover;
+			padding: 10rem 0 2rem 0;
+			transform: translateY(5rem);
+			opacity: 0;
 			
-			&.bg0 {
-				background-image: url(#{$ip}common/01.jpg);
+			&.load {
+				transform: translateY(0);
+				opacity: 1;
+				transition: all 1s ease 0;
+				text-shadow: 3px rgba($black, 0.3);
 			}
 			
-			&.bg1 {
-				background-image: url(#{$ip}common/02.jpg);
-			}
-			
-			&.bg2 {
-				background-image: url(#{$ip}common/03.jpg);
-			}
-			
-			&.bg3 {
-				background-image: url(#{$ip}common/04.jpg);
-			}
-			
-			&.bg4 {
-				background-image: url(#{$ip}common/05.jpg);
-			}
-			
-			&.bg5 {
-				background-image: url(#{$ip}common/06.jpg);
-			}
-			
-			&.bg6 {
-				background-image: url(#{$ip}common/07.jpg);
-			}
-			
-			&.bg7 {
-				background-image: url(#{$ip}common/08.jpg);
-			}
-			
-			&.bg8 {
-				background-image: url(#{$ip}common/09.jpg);
-			}
-			
-			&.bg9 {
-				background-image: url(#{$ip}common/10.jpg);
-			}
-			
-			&.bg10 {
-				background-image: url(#{$ip}common/11.jpg);
-			}
 				
 			h3 {
-				font-size: $FS*3.25;
+				font-size: 2.5rem;
 				font-family: century;
 			}
 		
 			p {
-				margin-top: $FS*1.5;
-				font-size: $FS*1.5;
+				margin-top: 1rem;
+				font-size: 1.5rem;
 				font-weight: normal;
 				font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
 			}
@@ -165,7 +130,7 @@ article {
 	}
 
 	.contents {
-		width: $max * 0.9;
+		width: $max;
 		clear: both;
 		background: center center no-repeat fixed;
 		overflow: hidden;

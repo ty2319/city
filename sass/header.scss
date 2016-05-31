@@ -34,14 +34,23 @@ header#top {
 	display: table;
 	width: $max;
 	position: $r;
-	z-index: 4;
-	background-color: rgba($navy , 0.7);
+	z-index: 5;
+	background-color: $modal4;
+	
+	&.fix {
+		@include fixT(0,0,5);
+		
+		#live {
+			@include media($ot) {
+				@include abT(6rem,1rem,3);
+			}
+		}
+	}
 
 	h2 {
-		background: none;
-		width: $max * 0.2;
+		width: $max * 0.21;
 		display: table-cell;
-		padding: 0.5rem 2rem 0.5rem;
+		padding: 0.5rem 2rem 0.5rem 0.5rem;
 		
 		img {
 			width: $max;
@@ -129,6 +138,26 @@ header#top {
 			font-size: 0.8rem;
 			display: block;
 			margin-top: 0.3rem;
+		}
+	}
+	
+	#live {
+		display: table-cell;
+		float: right;
+		width: $max * 0.55;
+		min-width: 230px;
+		padding-right: 1rem;
+		
+		@include media($ot) {
+			@include abT(11rem,1rem,3);
+			min-width: 200px;
+			width: $max * 0.25;
+		}
+		
+		img {
+			width: $max;
+			height: auto;
+			margin-top: -0.7rem;
 		}
 	}
 }
