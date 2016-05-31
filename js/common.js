@@ -31,7 +31,7 @@
 		$('#side li a').append(' ●');
 		$('.box dt').not('#issues dt').append('：');
 		$('.dot dd').prepend('・');
-		$('article h5').prepend('―　').append('　―');
+		$('.box2 dt').prepend('―　').append('　―');
 	},
 	
 	section = function() {

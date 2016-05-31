@@ -69,6 +69,8 @@ header#top {
 			li {
 				display: table-cell;
 				padding-left: 2.5rem;
+				line-height: $max * 0.8;
+				white-space: nowrap;
 				
 				&.on {
 					
@@ -79,7 +81,7 @@ header#top {
 			
 				a {
 					display: block;
-					padding: 1.4rem;
+					padding: 1.45rem;
 					
 					@include media($of) {
 						padding-bottom: 1.4rem;
@@ -88,7 +90,7 @@ header#top {
 					span {
 						font-size: 2rem;
 						float: left;
-						margin-right: 0.5rem;
+						margin: -0.3rem 0.5rem 0;
 					}
 				}
 			}
@@ -96,13 +98,13 @@ header#top {
 		
 		&:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4) {
 			display: none;
-			@include abT(4.87rem,0,11);
+			@include abT(4.9rem,0,11);
 			background-color: rgba($black , 0.8);
 			width: $max;
 			text-align: center;
 			
 			@include media($of) {
-				top: 4.87rem;
+				top: 4.5rem;
 			}
 			
 			li {
@@ -157,7 +159,7 @@ header#top {
 		img {
 			width: $max;
 			height: auto;
-			margin-top: -0.7rem;
+			margin-top: 0.2rem;
 		}
 	}
 }

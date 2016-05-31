@@ -2,25 +2,25 @@
 /* CSS Document */
 html {
   font-size: 16px;
-  line-height: 1.75rem;
   font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
   color: #333333;
   min-width: 940px;
   background-color: #000;
 }
+html body {
+  background: center top no-repeat fixed;
+  background-size: cover;
+  line-height: 1.75rem;
+}
 @media all and (max-width: 940px) {
-  html {
+  html body {
     font-size: 0.75rem;
   }
 }
 @media all and (max-width: 1500px) {
-  html {
+  html body {
     font-size: 0.875rem;
   }
-}
-html body {
-  background: center top no-repeat fixed;
-  background-size: cover;
 }
 html body.bg0 {
   background-image: url(../img/common/01.jpg);
@@ -57,7 +57,7 @@ html body.bg10 {
 }
 html body[class*=bg] {
   background-position: center -300px;
-  transition: all 40s ease 3s;
+  transition: background-position 40s ease 3s;
 }
 html body a {
   color: #0033cc;

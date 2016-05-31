@@ -5,23 +5,23 @@
 
 html {
 	font-size: 16px;
-	line-height: 1.75rem;
 	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
 	color: lighten($black, 20%);
 	min-width: $nf;
 	background-color: $black;
 	
-	@include media($nf) {
-		font-size: 0.75rem;
-	}
-	
-	@include media($of) {
-		font-size: 0.875rem;
-	}
-	
 	body {
 		background: center top no-repeat fixed;
 		background-size: cover;
+		line-height: 1.75rem;
+	
+		@include media($nf) {
+			font-size: 0.75rem;
+		}
+		
+		@include media($of) {
+			font-size: 0.875rem;
+		}
 		
 		&.bg0 {
 			background-image: url(#{$ip}common/01.jpg);
@@ -69,7 +69,7 @@ html {
 		
 		&[class*=bg] {
 			background-position: center -300px;
-			transition: all 40s ease 3s;
+			transition: background-position 40s ease 3s;
 		}
 
 		a {
