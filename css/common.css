@@ -18,25 +18,66 @@ html {
     font-size: 0.875rem;
   }
 }
-html a {
+html body {
+  background: center top no-repeat fixed;
+  background-size: cover;
+}
+html body.bg0 {
+  background-image: url(../img/common/01.jpg);
+}
+html body.bg1 {
+  background-image: url(../img/common/02.jpg);
+}
+html body.bg2 {
+  background-image: url(../img/common/03.jpg);
+}
+html body.bg3 {
+  background-image: url(../img/common/04.jpg);
+}
+html body.bg4 {
+  background-image: url(../img/common/05.jpg);
+}
+html body.bg5 {
+  background-image: url(../img/common/06.jpg);
+}
+html body.bg6 {
+  background-image: url(../img/common/07.jpg);
+}
+html body.bg7 {
+  background-image: url(../img/common/08.jpg);
+}
+html body.bg8 {
+  background-image: url(../img/common/09.jpg);
+}
+html body.bg9 {
+  background-image: url(../img/common/10.jpg);
+}
+html body.bg10 {
+  background-image: url(../img/common/11.jpg);
+}
+html body[class*=bg] {
+  background-position: center -300px;
+  transition: all 40s ease 3s;
+}
+html body a {
   color: #0033cc;
   text-decoration: none;
 }
-html a:hover {
+html body a:hover {
   text-decoration: none;
 }
-html img {
+html body img {
   border: none;
   line-height: 100%;
   vertical-align: bottom;
 }
-html #pagetop {
+html body #pagetop {
   position: fixed;
   bottom: -50px;
   right: 55px;
   z-index: 1;
 }
-html #pagetop a {
+html body #pagetop a {
   display: block;
   width: 50px;
   height: 50px;
@@ -47,7 +88,7 @@ html #pagetop a {
   font-size: 24px;
   line-height: 50px;
 }
-html #modal {
+html body #modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -56,15 +97,7 @@ html #modal {
   height: 100%;
   background-color: rgba(26, 26, 26, 0.8);
 }
-html #live {
-  position: fixed;
-  bottom: 75%;
-  right: 20px;
-  z-index: 1;
-  width: 278px;
-  height: 138px;
-}
-html #hero {
+html body #hero {
   position: fixed;
   bottom: 75%;
   right: 20px;

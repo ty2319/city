@@ -224,10 +224,6 @@ html {
 		display: block;
 	}
 	
-	#live {
-		display: none;
-	}
-	
 	#hero {
 		@include abT(75%,50%,1);
 		margin-left: -80px;

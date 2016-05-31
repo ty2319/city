@@ -1,68 +1,41 @@
 @charset "UTF-8";
 /* CSS Document */
-#pan {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  padding: 6px;
-  width: 100%;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
 article {
   width: 100%;
   clear: both;
-  background-color: #fff;
+  position: relative;
+}
+article #pan {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+  padding: 0.5rem;
+  width: 100%;
+  color: #fff;
+  background-color: rgba(1, 32, 82, 0.7);
 }
 article header#title {
   text-align: center;
   color: #fff !important;
-  background: center center no-repeat fixed;
-  background-size: cover;
+  padding: 10rem 0 2rem 0;
+  transform: translateY(5rem);
+  opacity: 0;
 }
-article header#title.bg0 {
-  background-image: url(../img/common/01.jpg);
-}
-article header#title.bg1 {
-  background-image: url(../img/common/02.jpg);
-}
-article header#title.bg2 {
-  background-image: url(../img/common/03.jpg);
-}
-article header#title.bg3 {
-  background-image: url(../img/common/04.jpg);
-}
-article header#title.bg4 {
-  background-image: url(../img/common/05.jpg);
-}
-article header#title.bg5 {
-  background-image: url(../img/common/06.jpg);
-}
-article header#title.bg6 {
-  background-image: url(../img/common/07.jpg);
-}
-article header#title.bg7 {
-  background-image: url(../img/common/08.jpg);
-}
-article header#title.bg8 {
-  background-image: url(../img/common/09.jpg);
-}
-article header#title.bg9 {
-  background-image: url(../img/common/10.jpg);
-}
-article header#title.bg10 {
-  background-image: url(../img/common/11.jpg);
+article header#title.load {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 1s ease 0;
+  text-shadow: 3px rgba(0, 0, 0, 0.3);
 }
 article header#title h3 {
-  font-size: 39px;
+  font-size: 2.5rem;
   font-family: century;
 }
 article header#title p {
-  margin-top: 18px;
-  font-size: 18px;
+  margin-top: 1rem;
+  font-size: 1.5rem;
   font-weight: normal;
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
 }
@@ -133,7 +106,7 @@ article section header p {
   margin: 6px 0 0 !important;
 }
 article .contents {
-  width: 90%;
+  width: 100%;
   clear: both;
   background: center center no-repeat fixed;
   overflow: hidden;

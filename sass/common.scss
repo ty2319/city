@@ -18,54 +18,102 @@ html {
 	@include media($of) {
 		font-size: 0.875rem;
 	}
-
-	a {
-		color: #0033cc;
-		text-decoration: none;
+	
+	body {
+		background: center top no-repeat fixed;
+		background-size: cover;
 		
-		&:hover {
-			text-decoration: none;
+		&.bg0 {
+			background-image: url(#{$ip}common/01.jpg);
 		}
-	}
-
-	img {
-		border: none;
-		line-height: $max;
-		vertical-align: bottom;
-	}
-
-	#pagetop {
-		@include fixB(-50px,55px,1);
 		
+		&.bg1 {
+			background-image: url(#{$ip}common/02.jpg);
+		}
+		
+		&.bg2 {
+			background-image: url(#{$ip}common/03.jpg);
+		}
+		
+		&.bg3 {
+			background-image: url(#{$ip}common/04.jpg);
+		}
+		
+		&.bg4 {
+			background-image: url(#{$ip}common/05.jpg);
+		}
+		
+		&.bg5 {
+			background-image: url(#{$ip}common/06.jpg);
+		}
+		
+		&.bg6 {
+			background-image: url(#{$ip}common/07.jpg);
+		}
+		
+		&.bg7 {
+			background-image: url(#{$ip}common/08.jpg);
+		}
+		
+		&.bg8 {
+			background-image: url(#{$ip}common/09.jpg);
+		}
+		
+		&.bg9 {
+			background-image: url(#{$ip}common/10.jpg);
+		}
+		
+		&.bg10 {
+			background-image: url(#{$ip}common/11.jpg);
+		}
+		
+		&[class*=bg] {
+			background-position: center -300px;
+			transition: all 40s ease 3s;
+		}
+
 		a {
-			display: block;
-			width: 50px;
-			height: 50px;
-			background-color: rgba(1,32,82,0.7);
-			border-radius: 50px;
-			text-align: center;
-			color: #fff;
-			font-size: 24px;
-			line-height: 50px;
+			color: #0033cc;
+			text-decoration: none;
+			
+			&:hover {
+				text-decoration: none;
+			}
 		}
-	}
 	
-	#modal {
-		@include fixT(0,0,2);
-		width: $max;
-		height: $max;
-		background-color: lighten($modal,10%);
-	}
+		img {
+			border: none;
+			line-height: $max;
+			vertical-align: bottom;
+		}
 	
-	#live {
-		@include fixB(75%,20px,1);
-		width: 278px;
-		height: 138px;
-	}
-	
-	#hero {
-		@include fixB(75%,20px,1);
-		width: 160px;
-		height: 160px;
+		#pagetop {
+			@include fixB(-50px,55px,1);
+			
+			a {
+				display: block;
+				width: 50px;
+				height: 50px;
+				background-color: rgba(1,32,82,0.7);
+				border-radius: 50px;
+				text-align: center;
+				color: #fff;
+				font-size: 24px;
+				line-height: 50px;
+			}
+		}
+		
+		#modal {
+			@include fixT(0,0,2);
+			width: $max;
+			height: $max;
+			background-color: lighten($modal,10%);
+		}
+		
+		#hero {
+			@include fixB(75%,20px,1);
+			width: 160px;
+			height: 160px;
+		}
 	}
 }

@@ -33,5 +33,5 @@
 	<li><a href="http://www.ntt-west.co.jp/symbol/mobile_mail/index.html" target="_blank" class="banner"><span class="fa fa-envelope-o"></span>速報メールマガジン ご登録</a></li>
 	<li><a href="http://www.ntt-west.co.jp/symbol/fan/index.html" target="_blank" class="banner"><span class="fa fa-user-plus"></span>ファンクラブ ご登録</a></li>
 	</ul>
-	<p id="live"><!--<a href="/symbol/hp/baseball/games/2016/city/scoreboard.php" >--><img src="/symbol/hp/baseball/games/2016/city/img/common/live.png" width="278" height="138" alt="試合速報配信中！"><!--</a>--></p>
+	<p id="live"><!--<a href="/symbol/hp/baseball/games/2016/city/scoreboard.php" >--><img src="/symbol/hp/baseball/games/2016/city/img/common/live.png" alt="試合速報配信中！"><!--</a>--></p>
 </nav>
