@@ -39,12 +39,6 @@ header#top {
 	
 	&.fix {
 		@include fixT(0,0,5);
-		
-		#live {
-			@include media($ot) {
-				@include abT(6rem,1rem,3);
-			}
-		}
 	}
 
 	h2 {
@@ -54,7 +48,7 @@ header#top {
 		
 		img {
 			width: $max;
-			min-width: 300px;
+			min-width: 310px;
 			height: auto;
 		}
 	}
@@ -65,12 +59,15 @@ header#top {
 		
 		&:nth-of-type(1) {
 			vertical-align: top;
+			height: 4rem;
+			overflow: hidden;
 			
 			li {
 				display: table-cell;
 				padding-left: 2.5rem;
-				line-height: $max * 0.8;
+				line-height:  0.8rem;
 				white-space: nowrap;
+				vertical-align: bottom;
 				
 				&.on {
 					
@@ -81,7 +78,7 @@ header#top {
 			
 				a {
 					display: block;
-					padding: 1.45rem;
+					padding: 1.46rem;
 					
 					@include media($of) {
 						padding-bottom: 1.4rem;
@@ -98,13 +95,13 @@ header#top {
 		
 		&:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4) {
 			display: none;
-			@include abT(4.9rem,0,11);
+			@include abT(4.79rem,0,11);
 			background-color: rgba($black , 0.8);
 			width: $max;
 			text-align: center;
 			
 			@include media($of) {
-				top: 4.5rem;
+				top: 4.718rem;
 			}
 			
 			li {
@@ -144,14 +141,12 @@ header#top {
 	}
 	
 	#live {
-		display: table-cell;
-		float: right;
-		width: $max * 0.55;
-		min-width: 230px;
-		padding-right: 1rem;
+		@include abB(0.5rem,1rem,3);
+		width: $max * 0.14;
+		min-width: 220px;
 		
 		@include media($ot) {
-			@include abT(11rem,1rem,3);
+			@include abT(6rem,1rem,3);
 			min-width: 200px;
 			width: $max * 0.25;
 		}
@@ -159,7 +154,6 @@ header#top {
 		img {
 			width: $max;
 			height: auto;
-			margin-top: 0.2rem;
 		}
 	}
 }

@@ -69,7 +69,7 @@ html {
 		
 		&[class*=bg] {
 			background-position: center -300px;
-			transition: background-position 40s ease 3s;
+			transition: background-position 40s ease 1s;
 		}
 
 		a {
@@ -83,7 +83,7 @@ html {
 	
 		img {
 			border: none;
-			line-height: $max;
+			line-height: 0;
 			vertical-align: bottom;
 		}
 	

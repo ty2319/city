@@ -20,7 +20,7 @@ article header#title {
   text-align: center;
   color: #fff !important;
   padding: 10rem 0 2rem 0;
-  transform: translateY(5rem);
+  transform: translateY(50px);
   opacity: 0;
 }
 article header#title.load {
@@ -54,9 +54,9 @@ article .half h5, article .half dl, article .half ul, article .half p, article .
 article .one_third {
   width: 33.33333%;
   min-width: 253.8px;
-  display: table-cell;
   clear: none;
-  padding: 0 1% !important;
+  padding: 0 1.5% !important;
+  float: left;
 }
 article .one_third:nth-child(3n-1) {
   border-left: gray dotted 1px;
@@ -66,7 +66,7 @@ article .one_third section {
   padding-top: 0 !important;
 }
 article .one_third p {
-  margin: 0 1rem 3rem 1rem;
+  margin: 0 1rem 2rem 1rem;
 }
 article .one_third img {
   width: 100%;
@@ -94,9 +94,6 @@ article div.contents, article .double {
 article div.contents h4, article .double h4 {
   margin-top: 5rem;
 }
-article div.contents h5, article .double h5 {
-  margin-bottom: 2rem !important;
-}
 article div.contents .half, article .double .half {
   padding-top: 5rem !important;
 }
@@ -106,7 +103,9 @@ article section header {
   color: #012052;
 }
 article section header:after {
-  content: "＿＿＿＿＿＿";
+  content: "－－－－－－－－";
+  font-weight: bold;
+  letter-spacing: -0.5rem;
 }
 article section header h4 {
   font-size: 2rem;
@@ -174,7 +173,7 @@ article .contents dl, article .contents .frame, article .contents .box {
   overflow: hidden;
   zoom: 1;
   background-color: rgba(255, 255, 255, 0.3);
-  margin: -1rem 0.5rem 0.5rem;
+  margin: 0.5rem;
 }
 article .contents dt {
   color: #012052;

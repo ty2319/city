@@ -57,7 +57,7 @@ html body.bg10 {
 }
 html body[class*=bg] {
   background-position: center -300px;
-  transition: background-position 40s ease 3s;
+  transition: background-position 40s ease 1s;
 }
 html body a {
   color: #0033cc;
@@ -68,7 +68,7 @@ html body a:hover {
 }
 html body img {
   border: none;
-  line-height: 100%;
+  line-height: 0;
   vertical-align: bottom;
 }
 html body #pagetop {
