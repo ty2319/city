@@ -148,17 +148,6 @@ table {
 	background-color: lighten($modal,30%);
 	color: #FFF;
 }
-	 
- figure {
-	 font-size: $FS * 0.9;
-	 line-height: $FS * 1.25;
-	 margin-bottom: $FS * 2;
-	 text-align: center;
-	 
-	 figcaption {
-		 margin-top: $FS / 2;
-	}
-}
 
 .one_third {
 	width: ($max * 0.698) / 3 !important;

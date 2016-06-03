@@ -16,7 +16,7 @@ header#top #topnavi {
   display: table-cell;
   text-align: right;
   vertical-align: middle;
-  padding-top: 12px;
+  padding-top: 1rem;
 }
 header#top #topnavi li {
   display: inline;
@@ -29,6 +29,7 @@ header#top #topnavi li {
   position: relative;
   z-index: 5;
   background-color: rgba(1, 32, 82, 0.7);
+  line-height: 0.9rem;
 }
 #global.fix {
   position: fixed;
@@ -50,7 +51,6 @@ header#top #topnavi li {
   color: #666666;
   display: table-cell;
   white-space: nowrap;
-  line-height: 0.9rem;
 }
 #global ul:nth-of-type(1) {
   vertical-align: top;
@@ -87,7 +87,7 @@ header#top #topnavi li {
 #global ul:nth-of-type(2), #global ul:nth-of-type(3), #global ul:nth-of-type(4) {
   display: none;
   position: absolute;
-  top: 4.85rem;
+  top: 5rem;
   left: 0;
   z-index: 11;
   background-color: rgba(0, 0, 0, 0.8);
@@ -96,7 +96,7 @@ header#top #topnavi li {
 }
 @media all and (max-width: 1500px) {
   #global ul:nth-of-type(2), #global ul:nth-of-type(3), #global ul:nth-of-type(4) {
-    top: 4.78rem;
+    top: 4.92rem;
   }
 }
 #global ul:nth-of-type(2) li, #global ul:nth-of-type(3) li, #global ul:nth-of-type(4) li {

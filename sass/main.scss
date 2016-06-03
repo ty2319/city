@@ -73,7 +73,7 @@ article {
 		padding: 0 $max*0.015 !important;
 		float: left;
 		
-		&:nth-child(3n-1) {
+		&:nth-of-type(3n-1) {
 			border-left: lighten($black,50%) dotted 1px;
 			border-right: lighten($black,50%) dotted 1px;
 		}
@@ -97,13 +97,14 @@ article {
 		min-width: $nf*0.9 / 4;
 		float: left;
 		clear: none;
-		padding: 0 !important;
+		padding: 1rem !important;
 		
-		h5,dl,p {
-			margin: 1rem;
+		dl,p {
+			margin-top: 1rem;
 		}
 		
 		img {
+			width: $max;
 			height: auto;
 			min-width: 187.5px !important;
 		}
@@ -120,6 +121,24 @@ article {
 		.half {
 			padding-top: 5rem !important;
 		}
+		
+		h5 {
+			margin-top: 5rem;
+		}
+		
+		&> img {
+			height: auto;
+			padding: 0 $max*0.015 !important;
+		}
+	}
+	.double .one_third {
+		padding-bottom: 5rem !important;
+		
+		 p {
+			overflow: hidden;
+			background: url(/symbol/hp/baseball/games/2016/city/img/mascot/line.gif) left 55px;
+			line-height: 28px;
+		 }
 	}
 		
 	section header {
@@ -174,7 +193,11 @@ article {
 		section {
 			padding: 5rem 0;
 			background: none;
-			
+		}
+		
+		&> img:not(.one_third) {
+			width: $max;
+			height: auto;
 		}
 	
 		.back_gray,.back_gray th,.back_gray td {
@@ -191,6 +214,17 @@ article {
 			height: 0;
 			clear: both;
 			overflow: hidden;
+		}
+		
+		figure {
+			 font-size: 0.8rem;
+			 line-height: 1rem;
+			 margin-bottom: 3rem;
+			 text-align: center;
+			 
+			 figcaption {
+				 margin-top: 0.5rem;
+			}
 		}
 				
 		h5,caption {

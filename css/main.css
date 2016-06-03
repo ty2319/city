@@ -64,7 +64,7 @@ article .one_third {
   padding: 0 1.5% !important;
   float: left;
 }
-article .one_third:nth-child(3n-1) {
+article .one_third:nth-of-type(3n-1) {
   border-left: gray dotted 1px;
   border-right: gray dotted 1px;
 }
@@ -83,12 +83,13 @@ article .quarter {
   min-width: 211.5px;
   float: left;
   clear: none;
-  padding: 0 !important;
+  padding: 1rem !important;
 }
-article .quarter h5, article .quarter dl, article .quarter p {
-  margin: 1rem;
+article .quarter dl, article .quarter p {
+  margin-top: 1rem;
 }
 article .quarter img {
+  width: 100%;
   height: auto;
   min-width: 187.5px !important;
 }
@@ -101,6 +102,21 @@ article div.contents h4, article .double h4 {
 }
 article div.contents .half, article .double .half {
   padding-top: 5rem !important;
+}
+article div.contents h5, article .double h5 {
+  margin-top: 5rem;
+}
+article div.contents > img, article .double > img {
+  height: auto;
+  padding: 0 1.5% !important;
+}
+article .double .one_third {
+  padding-bottom: 5rem !important;
+}
+article .double .one_third p {
+  overflow: hidden;
+  background: url(/symbol/hp/baseball/games/2016/city/img/mascot/line.gif) left 55px;
+  line-height: 28px;
 }
 article section header {
   text-align: center;
@@ -146,6 +162,10 @@ article .contents section {
   padding: 5rem 0;
   background: none;
 }
+article .contents > img:not(.one_third) {
+  width: 100%;
+  height: auto;
+}
 article .contents .back_gray, article .contents .back_gray th, article .contents .back_gray td {
   background-color: rgba(204, 204, 204, 0.8);
 }
@@ -158,6 +178,15 @@ article .contents hr {
   height: 0;
   clear: both;
   overflow: hidden;
+}
+article .contents figure {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+article .contents figure figcaption {
+  margin-top: 0.5rem;
 }
 article .contents h5, article .contents caption {
   color: #012052;

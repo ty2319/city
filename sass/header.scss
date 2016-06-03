@@ -21,7 +21,7 @@ header#top {
 		display: table-cell;
 		text-align: right;
 		vertical-align: middle;
-		padding-top: $FS;
+		padding-top: 1rem;
 		
 		li {
 			display: inline;
@@ -36,6 +36,7 @@ header#top {
 	position: $r;
 	z-index: 5;
 	background-color: $modal4;
+	line-height: 0.9rem;
 	
 	&.fix {
 		@include fixT(0,0,5);
@@ -57,7 +58,6 @@ header#top {
 		color: lighten($black, 40%);
 		display: table-cell;
 		white-space: nowrap;
-		line-height: 0.9rem;
 		
 		&:nth-of-type(1) {
 			vertical-align: top;
@@ -100,13 +100,13 @@ header#top {
 		
 		&:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4) {
 			display: none;
-			@include abT(4.85rem,0,11);
+			@include abT(5rem,0,11);
 			background-color: rgba($black , 0.8);
 			width: $max;
 			text-align: center;
 			
 			@include media($of) {
-				top: 4.78rem;
+				top: 4.92rem;
 			}
 			
 			li {
