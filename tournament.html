@@ -20,17 +20,17 @@
 <body>
 <!--#include virtual="templates/header-nav.inc"-->
 <article role="main">
-  <header id="title">
-    <h3>Tournament Bracket</h3>
-    <p>トーナメント表</p>
-  </header>
-    <div id="minimal" style="padding-bottom: 10em !important;"></div>
+	<header id="title">
+		<h3><span class="fa fa-sitemap"></span>Tournament Bracket</h3>
+		<p>トーナメント表</p>
+	</header>
+	<div id="minimal" style="padding-bottom: 10em !important;"></div>
 	<p id="pan">第87回都市対抗野球大会 ≫ トーナメント表</p>
 </article>
-<!--#include virtual="templates/footer.inc"-->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
-<script type="text/javascript" src="js/jquery.bracket.min.js"></script>
+<!--#include virtual="templates/footer.inc"--> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+<script type="text/javascript" src="js/common.js"></script> 
+<script type="text/javascript" src="js/jquery.bracket.min.js"></script> 
 <script type="text/javascript">
 	var minimalData = {
 		teams : [
@@ -74,7 +74,7 @@
 		$('div.jQBracket .round:nth-child(1) .match:nth-child(15) .team:nth-child(2),div.jQBracket .round:nth-child(2) .match:nth-child(8) .team:nth-child(1),div.jQBracket .round:nth-child(3) .match:nth-child(4) .team:nth-child(2)').addClass('west');	
 		$('div.jQBracket .round:nth-child(1) .match:nth-child(7) .team:nth-child(1),div.jQBracket .round:nth-child(2) .match:nth-child(4) .team:nth-child(1),div.jQBracket .round:nth-child(3) .match:nth-child(2) .team:nth-child(2)').addClass('east');
 	});
-</script>
+</script> 
 <!--[if lt IE 9]>
 <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
