@@ -198,6 +198,7 @@ article {
 		&> img:not(.one_third) {
 			width: $max;
 			height: auto;
+			margin-bottom: 2rem;
 		}
 	
 		.back_gray,.back_gray th,.back_gray td {
