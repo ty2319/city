@@ -57,6 +57,7 @@ header#top {
 		color: lighten($black, 40%);
 		display: table-cell;
 		white-space: nowrap;
+		line-height: 0.9rem;
 		
 		&:nth-of-type(1) {
 			vertical-align: top;
@@ -79,13 +80,10 @@ header#top {
 			
 				a {
 					display: block;
-<<<<<<< HEAD
 					padding: 1.4rem;
 					line-height: 0.9rem;
 					text-align: center;
-=======
 					padding: 1.46rem;
->>>>>>> feature/history
 					
 					@include media($of) {
 						padding-bottom: 1.4rem;
@@ -102,17 +100,13 @@ header#top {
 		
 		&:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4) {
 			display: none;
-<<<<<<< HEAD
 			@include abT(4.85rem,0,11);
-=======
-			@include abT(4.79rem,0,11);
->>>>>>> feature/history
 			background-color: rgba($black , 0.8);
 			width: $max;
 			text-align: center;
 			
 			@include media($of) {
-				top: 4.718rem;
+				top: 4.78rem;
 			}
 			
 			li {
