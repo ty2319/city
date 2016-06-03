@@ -10,7 +10,7 @@ article {
 
 	#pan {
 		display: none;
-		@include fixB(0,0,20);
+		@include fixB(0,0,1);
 		padding: 0.5rem;
 		width: $max;
 		color: $white;
@@ -21,7 +21,7 @@ article {
 			text-align: center;
 			color: $white !important;
 			padding: 10rem 0 2rem 0;
-			transform: translateY(5rem);
+			transform: translateY(50px);
 			opacity: 0;
 			
 			&.load {
@@ -46,8 +46,8 @@ article {
 		}
 		
 	.half {
-		width: $max * 0.3995;
-		min-width: $nf * 0.3995;
+		width: $max / 2;
+		min-width: $nf / 2;
 		float: left;
 		clear: none;
 		border-color: lighten($black,50%);
@@ -55,18 +55,28 @@ article {
 		padding: $FS*10 $max*0.05 !important;
 	
 		h5,dl,ul,p,table {
-			margin: $FS 0;
+			margin: 1rem 0;
 		}
 	}
 		
 	.one_third {
 		width: $max / 3;
 		min-width: $nf * 0.27;
-		float: left;
 		clear: none;
+		padding: 0 $max*0.015 !important;
+		float: left;
+		
+		&:nth-child(3n-1) {
+			border-left: lighten($black,50%) dotted 1px;
+			border-right: lighten($black,50%) dotted 1px;
+		}
+		
+		section {
+			padding-top: 0 !important;
+		}
 		
 		p {
-			margin: 0 $FS*2 $FS*2 $FS*2;
+			margin: 0 1rem 2rem 1rem;
 		}
 		
 		img {
@@ -83,7 +93,7 @@ article {
 		padding: 0 !important;
 		
 		h5,dl,p {
-			margin: $FS;
+			margin: 1rem;
 		}
 		
 		img {
@@ -95,37 +105,37 @@ article {
 	div.contents,.double {
 		padding: 0 !important;
 		width: $max !important;
-	}
-	
-	.double {
+		display: table;
 		
 		h4 {
-			margin-top: $FS*10;
-		}
-		
-		h5 {
-			margin-bottom: $FS*5 !important;
+			margin-top: 5rem;
 		}
 		
 		.half {
-			padding-top: $FS*5 !important;
+			padding-top: 5rem !important;
 		}
 	}
 		
 	section header {
 		text-align: center;
-		margin-bottom: $FS * 10;
+		margin-bottom: 5rem;
 		color: $navy;
 		
+		&:after {
+			content: "－－－－－－－－";
+			font-weight: bold;
+			letter-spacing: -0.5rem;
+		}
+		
 		h4 {
-			font-size: $FS * 2.5;
+			font-size: 2rem;
 			line-height: $max;
 			font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
 		}
 		
 		p {
 			font-family: century;
-			margin: $FS/2 0 0 !important;
+			margin: 0.5rem 0 0 !important;
 		}
 	}
 
@@ -135,7 +145,7 @@ article {
 		background: center center no-repeat fixed;
 		overflow: hidden;
 		background-size: cover;
-		padding: $FS*10 $max*0.05;
+		padding: 10rem $max*0.03;
 		
 		&.bg0 {
 			background-image: url(#{$ip}common/12.png);
@@ -162,7 +172,7 @@ article {
 		}
 		
 		section {
-			padding: $FS*2 0;
+			padding: 5rem 0;
 			background: none;
 			
 		}
@@ -185,21 +195,20 @@ article {
 				
 		h5,caption {
 			color: $navy;
-			margin-bottom: $FS;
-			padding: $FS / 2;
-			font-size: $FS*1.75;
+			margin-bottom: 1rem;
+			padding: 0.5rem;
+			font-size: 1.25rem;
 			text-align: center;
-			font-weight: normal;
 			font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
 		}
 		
 		dl,.frame,.box {
-			padding: $FS;
+			padding: 1rem;
 			border: #999 3px double;
 			overflow: hidden;
 			zoom: 1;
 			background-color: $modal2;
-			margin: $FS;
+			margin: 0.5rem;
 		}
 						
 		dt {
@@ -207,7 +216,11 @@ article {
 			font-weight: bold;
 			clear: both;
 			text-align: center;
-			margin-bottom: $FS;
+			margin-top: 2rem;
+			
+			&:first-child {
+				margin: 0;
+			}
 		}
 			
 		dd {

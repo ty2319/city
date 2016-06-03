@@ -10,7 +10,7 @@ article #pan {
   position: fixed;
   bottom: 0;
   right: 0;
-  z-index: 20;
+  z-index: 1;
   padding: 0.5rem;
   width: 100%;
   color: #fff;
@@ -20,7 +20,7 @@ article header#title {
   text-align: center;
   color: #fff !important;
   padding: 10rem 0 2rem 0;
-  transform: translateY(5rem);
+  transform: translateY(50px);
   opacity: 0;
 }
 article header#title.load {
@@ -40,8 +40,8 @@ article header#title p {
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
 }
 article .half {
-  width: 39.95%;
-  min-width: 375.53px;
+  width: 50%;
+  min-width: 470px;
   float: left;
   clear: none;
   border-color: gray;
@@ -49,16 +49,24 @@ article .half {
   padding: 120px 5% !important;
 }
 article .half h5, article .half dl, article .half ul, article .half p, article .half table {
-  margin: 12px 0;
+  margin: 1rem 0;
 }
 article .one_third {
   width: 33.33333%;
   min-width: 253.8px;
-  float: left;
   clear: none;
+  padding: 0 1.5% !important;
+  float: left;
+}
+article .one_third:nth-child(3n-1) {
+  border-left: gray dotted 1px;
+  border-right: gray dotted 1px;
+}
+article .one_third section {
+  padding-top: 0 !important;
 }
 article .one_third p {
-  margin: 0 24px 24px 24px;
+  margin: 0 1rem 2rem 1rem;
 }
 article .one_third img {
   width: 100%;
@@ -72,7 +80,7 @@ article .quarter {
   padding: 0 !important;
 }
 article .quarter h5, article .quarter dl, article .quarter p {
-  margin: 12px;
+  margin: 1rem;
 }
 article .quarter img {
   height: auto;
@@ -81,29 +89,32 @@ article .quarter img {
 article div.contents, article .double {
   padding: 0 !important;
   width: 100% !important;
+  display: table;
 }
-article .double h4 {
-  margin-top: 120px;
+article div.contents h4, article .double h4 {
+  margin-top: 5rem;
 }
-article .double h5 {
-  margin-bottom: 60px !important;
-}
-article .double .half {
-  padding-top: 60px !important;
+article div.contents .half, article .double .half {
+  padding-top: 5rem !important;
 }
 article section header {
   text-align: center;
-  margin-bottom: 120px;
+  margin-bottom: 5rem;
   color: #012052;
 }
+article section header:after {
+  content: "－－－－－－－－";
+  font-weight: bold;
+  letter-spacing: -0.5rem;
+}
 article section header h4 {
-  font-size: 30px;
+  font-size: 2rem;
   line-height: 100%;
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
 }
 article section header p {
   font-family: century;
-  margin: 6px 0 0 !important;
+  margin: 0.5rem 0 0 !important;
 }
 article .contents {
   width: 100%;
@@ -111,7 +122,7 @@ article .contents {
   background: center center no-repeat fixed;
   overflow: hidden;
   background-size: cover;
-  padding: 120px 5%;
+  padding: 10rem 3%;
 }
 article .contents.bg0 {
   background-image: url(../img/common/12.png);
@@ -132,7 +143,7 @@ article .contents.bg5 {
   background-image: url(../img/common/17.png);
 }
 article .contents section {
-  padding: 24px 0;
+  padding: 5rem 0;
   background: none;
 }
 article .contents .back_gray, article .contents .back_gray th, article .contents .back_gray td {
@@ -150,27 +161,29 @@ article .contents hr {
 }
 article .contents h5, article .contents caption {
   color: #012052;
-  margin-bottom: 12px;
-  padding: 6px;
-  font-size: 21px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1.25rem;
   text-align: center;
-  font-weight: normal;
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
 }
 article .contents dl, article .contents .frame, article .contents .box {
-  padding: 12px;
+  padding: 1rem;
   border: #999 3px double;
   overflow: hidden;
   zoom: 1;
   background-color: rgba(255, 255, 255, 0.3);
-  margin: 12px;
+  margin: 0.5rem;
 }
 article .contents dt {
   color: #012052;
   font-weight: bold;
   clear: both;
   text-align: center;
-  margin-bottom: 12px;
+  margin-top: 2rem;
+}
+article .contents dt:first-child {
+  margin: 0;
 }
 article .contents dd {
   overflow: hidden;
