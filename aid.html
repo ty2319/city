@@ -15,21 +15,22 @@
 <meta property="og:locality" content="Osaka,NTT" />
 <meta property="og:image" content="http://www.ntt-west.co.jp/favicon.ico" />
 <link rel="stylesheet" href="css/import.css" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript" src="js/jquery.tile.js"></script>
 <script type="text/javascript">
 $(window).on("load resize", function() {
-	$('#highlight img').css({'width' : $(window).width()*0.9 , 'height' : 'auto' , 'margin-bottom' : '2em'});
+	$('#highlight img').css({'width' : $(window).width()*0.9 , 'height' : 'auto' , 'margin-bottom' : '2rem'});
 	$('#part img,#etc img').css({'width' : $(window).width()*0.9/4 -24 , 'margin-left' : 12});
-	$('#part p,#etc p,#defence dl').css('margin-bottom','2em');
+	$('#part p,#etc p,#defence dl').css('margin-bottom','2rem');
 	$('#offence section').addClass('center');
 　　$("#part section").tile(); 
 　　$("#part section h5").tile(); 
-　　$("#offence .one_third dl").tile().css('margin-bottom','7em'); //要素数を指定
+　　$("#offence .one_third dl").tile().css('margin-bottom','7rem'); //要素数を指定
 　　$("#etc section").tile(4);
 　　$("#etc section h5").tile(4);
 　　$(".half").tile();
+	$('.one_third').css('border' , 'none');
 });
 
 $(function() {
