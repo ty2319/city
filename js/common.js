@@ -91,7 +91,7 @@
 	nav = function() {
 		
 		path = location.pathname
-		if(path.match("index")){
+		if(path.match("index") || $('div').hasClass('tse-scrollable')){
 			$('nav#global a').eq(4).addClass('active');
 	　　}
 		if(path.match("tournament")){
@@ -145,7 +145,7 @@
 	//title
 	title = function() {
 		
-		var A = Math.floor(11*Math.random());
+		var A = Math.floor(8*Math.random());
 		$('body').addClass('bg'+A);
 		
 		$('header#title').addClass('load');

@@ -55,18 +55,6 @@ html {
 			background-image: url(#{$ip}common/08.jpg);
 		}
 		
-		&.bg8 {
-			background-image: url(#{$ip}common/09.jpg);
-		}
-		
-		&.bg9 {
-			background-image: url(#{$ip}common/10.jpg);
-		}
-		
-		&.bg10 {
-			background-image: url(#{$ip}common/11.jpg);
-		}
-		
 		&[class*=bg] {
 			background-position: center -300px;
 			transition: background-position 40s ease 1s;

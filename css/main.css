@@ -4,6 +4,7 @@ article {
   width: 100%;
   clear: both;
   position: relative;
+  background: url(../img/common/dot.png);
 }
 article #pan {
   display: none;
@@ -141,22 +142,22 @@ article .contents {
   padding: 10rem 3%;
 }
 article .contents.bg0 {
-  background-image: url(../img/common/12.png);
+  background-image: url(../img/common/09.png);
 }
 article .contents.bg1 {
-  background-image: url(../img/common/13.png);
+  background-image: url(../img/common/10.png);
 }
 article .contents.bg2 {
-  background-image: url(../img/common/14.png);
+  background-image: url(../img/common/11.png);
 }
 article .contents.bg3 {
-  background-image: url(../img/common/15.png);
+  background-image: url(../img/common/12.png);
 }
 article .contents.bg4 {
-  background-image: url(../img/common/16.png);
+  background-image: url(../img/common/13.png);
 }
 article .contents.bg5 {
-  background-image: url(../img/common/17.png);
+  background-image: url(../img/common/14.png);
 }
 article .contents section {
   padding: 5rem 0;
@@ -247,25 +248,4 @@ article .zerofive {
 }
 article .bottom {
   padding-bottom: 12px !important;
-}
-
-.ie7 section dl, .ie7 .frame, .ie8 section dl, .ie8 .frame {
-  background-color: rgba(255, 255, 255, 0.3);
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#55FFFFFF,EndColorStr=#55FFFFFF);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#55FFFFFF,EndColorStr=#55FFFFFF)";
-}
-.ie7 .border thead th, .ie7 .enemy thead th, .ie7 .b_e, .ie8 .border thead th, .ie8 .enemy thead th, .ie8 .b_e {
-  background-color: rgba(0, 0, 0, 0.8);
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#66000000,EndColorStr=#66000000);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#66000000,EndColorStr=#66000000)";
-}
-.ie7 .back_gray, .ie7 .back_gray th, .ie7 .back_gray td, .ie8 .back_gray, .ie8 .back_gray th, .ie8 .back_gray td {
-  background-color: rgba(0, 0, 0, 0.8);
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#11000000,EndColorStr=#11000000);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#11000000,EndColorStr=#11000000)";
-}
-.ie7 .back_white, .ie7 .back_white th, .ie7 .back_white td, .ie8 .back_white, .ie8 .back_white th, .ie8 .back_white td {
-  background-color: rgba(255, 255, 255, 0.3);
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#55FFFFFF,EndColorStr=#55FFFFFF);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#55FFFFFF,EndColorStr=#55FFFFFF)";
 }

@@ -7,6 +7,7 @@ article {
 	width: $max;
 	clear: both;
 	position: $r;
+	background: url(#{$ip}common/dot.png);
 
 	#pan {
 		display: none;
@@ -167,27 +168,27 @@ article {
 		padding: 10rem $max*0.03;
 		
 		&.bg0 {
-			background-image: url(#{$ip}common/12.png);
+			background-image: url(#{$ip}common/09.png);
 		}
 		
 		&.bg1 {
-			background-image: url(#{$ip}common/13.png);
+			background-image: url(#{$ip}common/10.png);
 		}
 		
 		&.bg2 {
-			background-image: url(#{$ip}common/14.png);
+			background-image: url(#{$ip}common/11.png);
 		}
 		
 		&.bg3 {
-			background-image: url(#{$ip}common/15.png);
+			background-image: url(#{$ip}common/12.png);
 		}
 			
 		&.bg4 {
-			background-image: url(#{$ip}common/16.png);
+			background-image: url(#{$ip}common/13.png);
 		}
 		
 		&.bg5 {
-			background-image: url(#{$ip}common/17.png);
+			background-image: url(#{$ip}common/14.png);
 		}
 		
 		section {
@@ -300,28 +301,5 @@ article {
 	
 	.bottom {
 		padding-bottom: $FS !important;
-	}
-}
-
-.ie7,.ie8 {
-	
-	section dl,.frame {
-		@include Modal2;
-	}
-	
-	.border thead th,.enemy thead th,.b_e {
-		background-color: $modal;
-		filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#66000000,EndColorStr=#66000000);
-		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#66000000,EndColorStr=#66000000)";
-	}
-
-	.back_gray,.back_gray th,.back_gray td {
-		background-color: $modal;
-		filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#11000000,EndColorStr=#11000000);
-		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#11000000,EndColorStr=#11000000)";
-	}
-
-	.back_white,.back_white th,.back_white td {
-		@include Modal2;
 	}
 }
