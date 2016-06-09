@@ -4,13 +4,16 @@
 @import "settings";
 
 html {
-	min-height: 600px;
-	overflow: hidden;
 	
 	body {
+		overflow-x: hidden;
 		
 		&[class*=bg] {
 			background: none;
+		}
+		
+		@include media($nf) {
+			overflow-x: visible;
 		}
 
 		header#top {
@@ -38,7 +41,6 @@ html {
 			
 		main {
 			@include abT(0,0,1);
-			overflow: hidden !important;
 			background: url(#{$ip}common/dot.png);
 			
 			&>div {
@@ -52,7 +54,7 @@ html {
 				border-right: $max*0.05 rgba($black,80%) solid;
 			
 				#button {
-					@include abB(7%,0,10);
+					@include abT(55%,0,10);
 					font-family: century;
 				
 					li {
@@ -85,7 +87,7 @@ html {
 					line-height: 1.75rem;
 					
 					header {
-						@include abB(48%,27%,3);
+						@include abT(45%,27%,3);
 						width: $max * 0.1 !important;
 						color: #fff;
 						margin: 0;
@@ -106,7 +108,7 @@ html {
 					}
 					
 					div.tse-scrollable {
-						@include abB(8.6%,8.1%,10);
+						@include abT(56.5%,8.1%,10);
 						width: $max * 0.18;
 						overflow: hidden;
 										
@@ -157,62 +159,21 @@ html {
 				}
 			}
 		}
-	}
 		
-	#news {
-		@include abT(5.4rem,65%,6);
-		width: $max * 0.455;
-		background: none !important;
-		overflow: hidden;
-		line-height: $max;
-		
-		@include media($of) {
-			@include abT(11rem,1rem,3);
-			width: $max;
-		}
-		
-		h3 {
-			width: $max * 0.1;
-			padding: 0.2rem 0.5rem;
-			background-color: $white;
-			color: lighten($black, 20%);
-			font-weight: bold;
-			text-align: center;
-			font-family: century;
-			display: inline-block;
-			vertical-align: top;
-		
-			@include media($of) {
-				width: $max * 0.05;
-				min-width: 4rem;
-				height: 1.6rem;
-			}
-		}
-			
-		#prev,#next {
-			display: inline-block;
-			margin-left: 1rem;
-			cursor: pointer;
-			color: $white;
-			font-size: 1.5rem;
-		
-			@include media($of) {
-				font-size: 1.25rem;
-			}
-		}
-		
-		#prev {
-			display: none;
-		}
-		
-		div {
-			width: $max;
+		#news {
+			@include abT(5.4rem,65%,6);
+			width: $max * 0.455;
 			background: none !important;
-			padding: 0;
+			line-height: $max;
+			
+			@include media($of) {
+				@include abT(11rem,1rem,3);
+				width: $max !important;
+			}
 			
 			h3 {
 				width: $max * 0.1;
-				padding: 0.2rem 0;
+				padding: 0.2rem 0.5rem;
 				background-color: $white;
 				color: lighten($black, 20%);
 				font-weight: bold;
@@ -223,29 +184,70 @@ html {
 			
 				@include media($of) {
 					width: $max * 0.05;
+					min-width: 4rem;
+					height: 1.6rem;
+				}
+			}
+				
+			#prev,#next {
+				display: inline-block;
+				margin-left: 1rem;
+				cursor: pointer;
+				color: $white;
+				font-size: 1.5rem;
+			
+				@include media($of) {
+					font-size: 1.25rem;
 				}
 			}
 			
-			ul {
-				margin-top: 0.5rem;
-				display: table;
-					
-				li {
-					display: table-cell;
-					color: $white;
-					
+			#prev {
+				display: none;
+			}
+			
+			div {
+				width: $max;
+				background: none !important;
+				padding: 0;
+				
+				h3 {
+					width: $max * 0.1;
+					padding: 0.2rem 0;
+					background-color: $white;
+					color: lighten($black, 20%);
+					font-weight: bold;
+					text-align: center;
+					font-family: century;
+					display: inline-block;
+					vertical-align: top;
+				
 					@include media($of) {
-						width: $max;
+						width: $max * 0.05;
 					}
-					
-					a {
-						color: $white;
-						margin: 0 0.5rem 0 0;
-						padding: 0;
-						text-decoration: underline;
+				}
+				
+				ul {
+					margin-top: 0.5rem;
+					display: table;
+						
+					li {
+						display: table-cell;
+						color: $white; 
+						
+						a {
+							color: $white;
+							margin: 0 0.5rem 0 0;
+							padding: 0;
+							text-decoration: underline;
+						}
 					}
 				}
 			}
+		}
+		
+		footer {
+			@include abB(0,0,10);
+			width: $max;
 		}
 	}
 	
@@ -254,7 +256,7 @@ html {
 	}
 	
 	#vs {
-		@include abT(65%,0,10);
+		@include abB(10%,3%,10);
 		display: block;
 	}
 	

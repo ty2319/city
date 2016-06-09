@@ -1,7 +1,7 @@
 <footer role="contentinfo">
   <ul>
     <li><a href="/symbol/index.html" target="_blank">NTT西日本グループ　シンボルチーム</a></li>
-    <li> <small>© 2015　西日本電信電話株式会社</small></li>
+    <li> <small>&copy; 2016　西日本電信電話株式会社</small></li>
   </ul>
 </footer>
 <!--<a href="/symbol/hp/baseball/games/2016/city/hero.html" id="hero"><img src="/symbol/hp/baseball/games/2016/city/img/common/hero.png" width="160" height="160" alt="ヒーローインタビュー"></a>-->

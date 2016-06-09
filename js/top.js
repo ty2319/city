@@ -22,12 +22,14 @@
 			}
 			ssize = wh*0.7;
 			
-			$('main,article:not(#news),#back').width(w).height(middle).css('top' , hh);
+			$('main,article:not(#news),#back').width(w).height(middle).css({'top' : hh , 'min-height' : 500});
 			$('#button li').width(w*0.05).height(w*0.05);
 			$('main > div.btm:not(.active)').width(ssize).height(ssize);
 			$('#back div').addClass('inner');
 			$('section div.tse-scrollable').width(w*0.18).height(wh * 3.7).TrackpadScrollEmulator();
-			$('footer').css('margin-top' , middle - nh - 70);
+			if ($(window).width() < 1500) {
+				$('#news li').width($(window).width());
+			}
 		}
 	
 		start = function() {	
@@ -35,22 +37,22 @@
 			for(var i = 0; i < 16 ; ++i) {
 				//random opacity, top, left and angle
 				var o	= 0.3,
-				t		= Math.floor(Math.random()*196) + 50, // between 5 and 200
+				t		= Math.floor(Math.random()*196) + 400, // between 5 and 200
 				l		= Math.floor(Math.random()*696) + 50, // between 5 and 700
 				a		= Math.floor(Math.random()*101) - 50; // between -50 and 50
 						
 				$el		= $('<div class="btm">').css({
 					opacity		: o,
-					bottom		: t + 'px',
-					right		: l + 'px',
+					top			: t + 100 + 'px',
+					left		: l + 'px',
 					width		: ssize,
 					height		: ssize
 				});
 						
 				$el2		= $('<div class="tp">').css({
 					opacity		: o,
-					bottom		: t + 300 + 'px',
-					right		: l - 30 + 'px',
+					top			: t + 'px',
+					left		: l - 30 + 'px',
 					width		: ssize * 0.7,
 					height		: ssize * 0.7,
 					background	: '#012052'
@@ -82,10 +84,10 @@
 							param		= {
 								width	: wh,
 								height	: wh,
-								bottom	: (middle * 0.07) + (wh * Math.floor(i/4)),
-								right	: (w * 0.07) + (wh * (i%4)),
+								top	: (middle * 0.55) + (wh * Math.floor(i/4)),
+								left	: (w * 0.07) + (wh * (i%4)),
 								opacity	: 0.7,
-								zIndex	: 1
+								zIndex	: 2
 							};
 									
 							if (!$.browser.msie)
@@ -101,10 +103,10 @@
 							param		= {
 								width	: wh * 0.7,
 								height	: wh * 0.7,
-								bottom	: (middle * 0.4) + ((wh * 0.7) * Math.floor(i/4)),
-								right	: (w * 0.25) + ((wh * 0.7) * (i%4)),
+								top		: (middle * 0.35) + ((wh * 0.7) * Math.floor(i/4)),
+								left	: (w * 0.25) + ((wh * 0.7) * (i%4)),
 								opacity	: 0.7,
-								zIndex	: 2
+								zIndex	: 1
 							};
 									
 							if (!$.browser.msie)
@@ -134,7 +136,7 @@
 				$('main > div.btm').each(function(i) {
 					//random opacity, top, left and angle
 					var o			= 0.3,
-					t			= Math.floor(Math.random()*196) + 50, // between 5 and 200
+					t			= Math.floor(Math.random()*196) + 400, // between 5 and 200
 					l			= Math.floor(Math.random()*696) + 50, // between 5 and 700
 					a			= Math.floor(Math.random()*101) - 50; // between -50 and 50
 					$el			= $(this),
@@ -142,8 +144,8 @@
 						width	: ssize,
 						height	: ssize,
 						opacity	: o,
-						bottom	: t + 'px',
-						right	: l + 'px'
+						top		: t + 100 + 'px',
+						left	: l + 'px'
 					};
 							
 					if (!$.browser.msie)
@@ -155,14 +157,14 @@
 				$('main > div.tp').each(function(i) {
 					//random opacity, top, left and angle
 					var o			= 0.3,
-					t			= Math.floor(Math.random()*196) + 50, // between 5 and 200
+					t			= Math.floor(Math.random()*196) + 400, // between 5 and 200
 					l			= Math.floor(Math.random()*696) + 50, // between 5 and 700
 					a			= Math.floor(Math.random()*101) - 50; // between -50 and 50
 					$el			= $(this),
 					param		= {
 						opacity	: o,
-						bottom		: t + 300 + 'px',
-						right		: l - 30 + 'px',
+						top			: t + 'px',
+						left		: l - 30 + 'px',
 						width		: ssize * 0.7,
 						height		: ssize * 0.7,
 					};
@@ -180,17 +182,17 @@
 		active = function() {	
 			
 			$('main div.btm.active').each(function(i) {
-				var b = (middle * 0.07) + 5 + (wh * Math.floor(i/4)),
-				r = (w * 0.07) + (wh * (i%4));
+				var t = (middle * 0.55) + (wh * Math.floor(i/4)),
+				l = (w * 0.07) + (wh * (i%4));
 				
-				$(this).css({'width' : wh,'height': wh , 'bottom': b , 'right': r , 'opacity': 0.7});
+				$(this).css({'width' : wh,'height': wh , 'top': t , 'left': l , 'opacity': 0.7});
 			});
 			
 			$('main div.tp.active').each(function(i) {
-				var b = (middle * 0.4) + ((wh * 0.7) * Math.floor(i/4)),
-					r = (w * 0.25) + ((wh * 0.7) * (i%4));
+				var t = (middle * 0.35) + ((wh * 0.7) * Math.floor(i/4)),
+					l = (w * 0.25) + ((wh * 0.7) * (i%4));
 				
-				$(this).css({'width' : wh * 0.7,'height': wh * 0.7 , 'bottom': b , 'right': r , 'opacity': 0.7});
+				$(this).css({'width' : wh * 0.7,'height': wh * 0.7 , 'top': t , 'left': l , 'opacity': 0.7});
 			});
 		},
 		
@@ -213,8 +215,9 @@
 			$('#news ul').width(nw * cnt);
 			
 			$('#news li').each(function(i){
-				$(this).attr('id','news' + (i));
-				$(this).width(nw);
+				var spot = $(this);
+				spot.attr('id','news' + (i));
+				spot.width(nw);
 			});
 			
 			function startTimer(){
