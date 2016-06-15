@@ -16,23 +16,23 @@ article .half h5 img {
   cursor: pointer;
 }
 article .half div {
-  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 3;
+  z-index: 6;
   width: 50%;
   margin: -25% 0 0 -25%;
   color: #fff;
-  line-height: 24px;
+  display: none;
+  overflow: auto;
 }
 article .half div h6 {
-  font-size: 15px;
+  font-size: 1.25rem;
   color: #fff;
   border-top: #fff 3px double;
   border-bottom: #fff 3px double;
-  margin-bottom: 24px;
-  padding: 12px;
+  margin-bottom: 2rem;
+  padding: 1rem;
   overflow: hidden;
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
 }
@@ -43,17 +43,17 @@ article .half div img {
 }
 article .half div .left {
   float: left;
-  margin-right: 24px;
+  margin-right: 2rem;
 }
 article .half div .right {
   float: right;
-  margin-left: 24px;
+  margin-left: 2rem;
 }
 article .half div a {
   display: block;
   text-decoration: none;
   background-color: #2c7eff;
-  padding: 12px;
+  padding: 1rem;
   text-align: center;
   color: #fff;
   overflow: hidden;
@@ -64,10 +64,10 @@ article .half div a:hover {
 
 #close {
   position: fixed;
-  top: 6%;
+  top: 5%;
   left: 77.5%;
-  z-index: 3;
-  font-size: 60px;
+  z-index: 6;
+  font-size: 4rem;
   display: none;
   color: #fff;
   cursor: pointer;

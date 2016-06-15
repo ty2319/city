@@ -53,7 +53,7 @@ article .half {
   clear: none;
   border-color: gray;
   border-style: dotted;
-  padding: 120px 5% !important;
+  padding: 10rem 3% !important;
 }
 article .half h5, article .half dl, article .half ul, article .half p, article .half table {
   margin: 1rem 0;
@@ -102,7 +102,7 @@ article div.contents h4, article .double h4 {
   margin-top: 5rem;
 }
 article div.contents .half, article .double .half {
-  padding-top: 5rem !important;
+  padding-top: 0 !important;
 }
 article div.contents h5, article .double h5 {
   margin-top: 5rem;
@@ -227,14 +227,15 @@ article .contents dd a span {
   margin-right: 6px;
 }
 article .contents .box {
-  margin: 12px 0 0 0 !important;
+  margin: 1rem 0 0 0 !important;
 }
 article .contents .box dt {
   float: left;
+  margin-top: 0;
 }
 article .contents .box dd {
   text-align: left;
-  margin-bottom: 12px;
+  margin-bottom: 1rem;
 }
 article dfn img {
   vertical-align: middle;
@@ -243,9 +244,9 @@ article .center {
   text-align: center;
 }
 article .zerofive {
-  padding-top: 6px !important;
-  padding-top: 12px !important;
+  padding-top: 0.5rem !important;
+  padding-top: 1rem !important;
 }
 article .bottom {
-  padding-bottom: 12px !important;
+  padding-bottom: 1rem !important;
 }

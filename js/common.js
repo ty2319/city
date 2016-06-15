@@ -165,7 +165,7 @@
 		return false;
 		});
 		
-		var set = 1;//ウインドウ上部からどれぐらいの位置で変化させるか
+		var set =  $('#global').height() + 1;//ウインドウ上部からどれぐらいの位置で変化させるか
 		var boxTop = new Array;
 		var current = -1;
 		var startPosition = 0;

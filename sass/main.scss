@@ -60,7 +60,7 @@ article {
 		clear: none;
 		border-color: lighten($black,50%);
 		border-style: dotted;
-		padding: $FS*10 $max*0.05 !important;
+		padding: 10rem $max*0.03 !important;
 	
 		h5,dl,ul,p,table {
 			margin: 1rem 0;
@@ -120,7 +120,7 @@ article {
 		}
 		
 		.half {
-			padding-top: 5rem !important;
+			padding-top: 0 !important;
 		}
 		
 		h5 {
@@ -273,15 +273,16 @@ article {
 		}
 		
 		.box {
-			margin: $FS 0 0 0 !important;
+			margin: 1rem 0 0 0 !important;
 			
 			dt {
 				float: left;
+				margin-top: 0;
 			}
 		
 			dd {
 				text-align: left;
-				margin-bottom: $FS;
+				margin-bottom: 1rem;
 			}
 		}
 	}
@@ -295,11 +296,11 @@ article {
 	}	
 	
 	.zerofive {
-		padding-top: $FS/2 !important;
-		padding-top: $FS !important;
+		padding-top: 0.5rem !important;
+		padding-top: 1rem !important;
 	}
 	
 	.bottom {
-		padding-bottom: $FS !important;
+		padding-bottom: 1rem !important;
 	}
 }

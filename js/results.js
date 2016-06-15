@@ -8,13 +8,13 @@ $(window).on('load resize' , function() {
 	
 	$('article > .head').each(function() {
         $('table.quarter:eq(0)',this).addClass('blue');
-        $('table.quarter:eq(1)',this).addClass('border').css('margin-left','52%');
+        $('table.quarter:eq(1)',this).addClass('border').css('margin-left','50%');
 		$('table.battery tr:eq(0) th:eq(0)' , this).addClass('b_n');
 		$('table.battery tr:eq(1) th:eq(0)' , this).addClass('b_e');
     });	
 	$('article > .tail').each(function() {
         $('table.quarter:eq(0)',this).addClass('border');
-        $('table.quarter:eq(1)',this).addClass('blue').css('margin-left','52%');
+        $('table.quarter:eq(1)',this).addClass('blue').css('margin-left','50%');
 		$('table.battery tr:eq(0) th:eq(0)' , this).addClass('b_e');
 		$('table.battery tr:eq(1) th:eq(0)' , this).addClass('b_n');
     });
