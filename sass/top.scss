@@ -32,7 +32,7 @@ html {
 				height: $max;
 				
 				&.inner {
-					transform: scale(1.5 , 1.5) rotate(15deg);
+					transform: scale(1.5 , 1.5) rotate(12deg);
 					transition: all 30s ease 0.5s;
 				}
 			}
@@ -256,8 +256,13 @@ html {
 	}
 	
 	#vs {
-		@include abB(10%,3%,10);
+		@include abB(10%,0.5%,10);
 		display: block;
+		
+		&.rotate {
+			transform: rotate(12deg);
+			transition: all 30s ease 0.5s;
+		}
 	}
 	
 	#hero {

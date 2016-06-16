@@ -29,7 +29,7 @@ html body #back div {
   height: 100%;
 }
 html body #back div.inner {
-  transform: scale(1.5, 1.5) rotate(15deg);
+  transform: scale(1.5, 1.5) rotate(12deg);
   transition: all 30s ease 0.5s;
 }
 html body main {
@@ -245,9 +245,13 @@ html #live {
 html #vs {
   position: absolute;
   bottom: 10%;
-  right: 3%;
+  right: 0.5%;
   z-index: 10;
   display: block;
+}
+html #vs.rotate {
+  transform: rotate(12deg);
+  transition: all 30s ease 0.5s;
 }
 html #hero {
   position: absolute;

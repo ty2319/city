@@ -32,7 +32,9 @@
 			}
 		}
 	
-		start = function() {	
+		start = function() {
+			
+			$('#vs').addClass('rotate');
 	
 			for(var i = 0; i < 16 ; ++i) {
 				//random opacity, top, left and angle
