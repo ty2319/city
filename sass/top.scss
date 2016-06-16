@@ -258,11 +258,7 @@ html {
 	#vs {
 		@include abB(10%,0.5%,10);
 		display: block;
-		
-		&.rotate {
-			transform: rotate(12deg);
-			transition: all 30s ease 0.5s;
-		}
+		transform: rotate(12deg);
 	}
 	
 	#hero {
