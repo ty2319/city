@@ -47,7 +47,7 @@ $count_ini = pg_fetch_result($rs1,0,0);
 <meta property="og:image" content="http://www.ntt-west.co.jp/favicon.ico" />
 <link rel="stylesheet" href="css/import.css" />
 <link rel="stylesheet" href="css/results.css" media="screen" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/common2.js"></script>
 <script type="text/javascript" src="js/results2.js"></script>
 <script type="text/javascript">
@@ -55,7 +55,7 @@ $count_ini = pg_fetch_result($rs1,0,0);
 		$("html, body").stop().animate({scrollTop: $('article').offset().top}, 500, "linear");
 		
 		var cnt = $('.half div section').length;
-		var w = $('.half').outerWidth() - $('.contents').width()*0.048;
+		var w = $('.half').outerWidth() - $('.contents').outerWidth()*0.0095;
 		var now = $('.half div section').eq(cnt-1).attr('id');
 		var pre = $('.half div section').eq(cnt-2).attr('id');
 		

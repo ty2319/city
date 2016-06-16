@@ -4,10 +4,9 @@
 @import "settings";
 
 .tail .half,.head .half {
-	padding-top : 0 !important;
-	margin-left: -$max * 0.76;
-	width: $max * 0.42;
-	min-width: 355.32px;
+	padding : 0 $max*0.03 !important;
+	margin-left: -$max * 0.75;
+	min-width: $nf / 2;
 	overflow: hidden;
 	text-align: center;
 	
@@ -17,12 +16,11 @@
 	
 	div {
 		section {
-			margin-top: $FS;
+			padding: 0;
 			float: left;
-			clear: none;
 			
-			h6 {
-				float: none;
+			p {
+				margin: 0;
 			}
 		}
 	}
@@ -32,15 +30,15 @@
 	
 		.prev {
 			float: left;
-			margin-left: -$FS * 3;
+			margin-left: -2rem;
 			display: none;
-			margin-top: -$FS * 40;
+			margin-top: -25rem;
 		}
 		
 		.next {
 			float: right;
-			margin-right: -$FS * 3;
-			margin-top: -$FS * 40;
+			margin-right: -2rem;
+			margin-top: -25rem;
 		}
 		
 		a {
@@ -59,12 +57,11 @@ table {
 	width: $max;
 	
 	&.quarter {
-		width: $max * 0.24;
-		min-width: 203.04px;
+		min-width: 235.04px;
 	}
 	
 	caption span {
-		font-size: $FS * 1.25;
+		font-size: 1.25rem;
 	}
 	
 	thead th {
@@ -148,55 +145,3 @@ table {
 	background-color: lighten($modal,30%);
 	color: #FFF;
 }
-	 
- figure {
-	 font-size: $FS * 0.9;
-	 line-height: $FS * 1.25;
-	 margin-bottom: $FS * 2;
-	 text-align: center;
-	 
-	 figcaption {
-		 margin-top: $FS / 2;
-	}
-}
-
-.one_third {
-	width: ($max * 0.698) / 3 !important;
-	min-width: 218px !important;
-	padding: $FS*2 $max*0.05 $FS*5 $max*0.05 !important;
-	border-color: lighten($black,50%);
-	border-style: dotted;
-	
-	 p {
-		overflow: hidden;
-		text-align: left;
-		margin: $FS*2 0 !important;
-		padding: 0;
-		zoom: 1;
-		background: url(/symbol/hp/baseball/games/2016/city/img/mascot/line.gif) left 55px;
-		line-height: 28px;
-	 }
-}
-
-.ie7,.ie8 {
-	.back_blue {
-		th,td {
-			@include Modal3;
-		}
-	}
-	
-	.blue thead th,.ntt thead th,.b_n {
-		background-color: $modal3;
-		filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#992c7eff,EndColorStr=#992c7eff);
-		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#992c7eff,EndColorStr=#992c7eff)";
-	}
-	
-	.current {
-		background-color: #454545 !important;
-	}
-	
-	.score thead th {
-		@include Modal4;
-	}
-}
-	

@@ -2,7 +2,13 @@
 
 $max: 100%;
 
+$fh: 500px;
+
 $nf: 940px;
+
+$ot: 1200px;
+
+$of: 1500px;
 
 $FS: 12px;
 
@@ -21,7 +27,6 @@ $navy: #012052;
 $blue: #2c7eff;
 
 //-------------------------------
-
 
 
 //background ------------------------------------------------------------
@@ -110,7 +115,7 @@ $ip: '../img/';
 
 %fix {
 	position: fixed;
-	top: 50%;
+	top: 55%;
 	left: 0;
 }
 
@@ -138,18 +143,18 @@ $ip: '../img/';
 @mixin nv {
 	@extend %fix;
 	z-index: 4;
-	height: $FS * 18.5;
 	width: $max;
-	margin: -7em 0 0 0;
-	padding: 1.25em 0 0;
+	height: 18rem;
+	margin: -7rem 0 0 0;
+	padding: 1.25rem 0;
 	display: none;
 	background-color: $black;
 }
 
 	@mixin nvli {
 		color: lighten($black, 40%);
-		font-size: $FS * 1.25;
-		line-height: $FS * 2.25;
+		line-height: $max;
+		margin-bottom: 1rem;
 	}
 	
 	@mixin nva {
@@ -164,4 +169,35 @@ $ip: '../img/';
 	}
 
 //----------------------------------------------------
+
+//media query ---------------------
+ 
+@mixin media($mediaSize) {
+  @if $mediaSize <= $fh{
+    @media all and (max-width: $fh) {
+      @content
+    }
+  }
+  
+  @else if $mediaSize <= $nf{
+    @media all and (max-width: $nf) {
+      @content
+    }
+  }
+  
+  @else if $mediaSize <= $ot{
+    @media all and (max-width: $ot) {
+      @content
+    }
+  }
+  
+  @else if $mediaSize <= $of{
+    @media all and (max-width: $of) {
+      @content
+    }
+  }
+  
+}
+
+//---------------------------------
 	

@@ -4,25 +4,29 @@
 @import "settings";
 
 footer {
-	width: $max;
 	color: $white;
 	font-size: $FS * 0.9;
 	clear: both;
-}
 
-	footer ul {
-		min-width: 930px;
+	ul {
+		width: $max;
+		min-width: $nf;
 		margin: 0 auto;
-		padding: 10px 0 $FS/2 10px;
+		padding: 10px 10px $FS/2 10px;
 		background-color: $black;
-	}
+		display: table;
 		
-			footer li a {
+		li {
+			display: table-cell;
+			
+			a {
 				color: #FFF;
 			}
 				
-small {
-	display: block;
-	margin: $FS*-1.5 $FS*1.5 0 0;
-	text-align: right;
+			small {
+				display: block;
+				text-align: right;
+			}
+		}
+	}
 }

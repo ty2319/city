@@ -1,289 +1,262 @@
 @charset "UTF-8";
 /* CSS Document */
-h2 {
-  position: absolute;
-  top: 35%;
-  left: 5%;
+html body {
+  overflow-x: hidden;
+}
+html body[class*=bg] {
+  background: none;
+}
+@media all and (max-width: 940px) {
+  html body {
+    overflow-x: visible;
+  }
+}
+html body header#top {
+  position: relative;
   z-index: 2;
 }
-
-#global h3 {
-  top: 60%;
-  left: 50%;
-  margin: 0 0 0 -80px;
-  background: none;
-}
-#global dl {
-  top: 55.0%;
-}
-
-aside h3 {
-  top: 60%;
-  left: 50%;
-  margin-left: 20px;
-  background: none;
-}
-aside dl {
-  top: 60%;
-}
-
-article {
-  overflow: hidden !important;
-}
-article #button {
+html body #back {
   position: absolute;
-  bottom: 5%;
-  right: 5%;
-  z-index: 5;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: stretch;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
 }
-article #button li {
+html body #back div {
+  background: url(../img/top/4.jpg), url(../img/top/0.jpg), url(../img/top/1.jpg), url(../img/top/2.jpg), url(../img/top/3.jpg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+html body #back div.inner {
+  transform: scale(1.5, 1.5) rotate(12deg);
+  transition: all 30s ease 0.5s;
+}
+html body main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: url(../img/common/dot.png);
+}
+html body main > div {
+  position: absolute;
   background-color: #000;
+}
+html body main article {
+  background: none;
+  height: 100%;
+  border-right: 5% black solid;
+}
+html body main article #button {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  z-index: 10;
+  font-family: century;
+}
+html body main article #button li {
+  background-color: #012052;
   color: #fff;
   text-align: center;
   cursor: pointer;
-  font-weight: bold;
   min-width: 50px;
   min-height: 50px;
-  margin-left: 1px;
-  opacity: .7;
+  margin-bottom: 1px;
+  padding-top: 30%;
+  opacity: .8;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
-article #back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-article #back div {
-  width: 100%;
-  height: 100%;
-  background: url(img/1.jpg) no-repeat center center;
-  background-size: cover;
-}
-article #back div.inner {
-  transform: scale(1.5, 1.5) rotate(15deg);
-  transition: all 30s ease 0.5s;
-  z-index: 1;
-}
-article main {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-}
-article main > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
+html body main article #button li.on {
   background-color: #000;
 }
-article section {
-  position: absolute;
-  bottom: 0;
-  right: 5%;
-  z-index: 3;
+html body main article section {
   color: #fff;
   display: none;
   min-width: 203px;
-}
-article section header {
-  width: 100%;
+  padding: 0 !important;
+  background: none !important;
+  overflow: auto;
   height: 100%;
-  text-align: center;
+  line-height: 1.75rem;
+}
+html body main article section header {
+  position: absolute;
+  top: 45%;
+  left: 27%;
+  z-index: 3;
+  width: 10% !important;
+  color: #fff;
+  margin: 0;
+}
+html body main article section header:after {
+  content: "";
+}
+html body main article section header h3 {
+  font-family: century;
+  font-size: 1.25rem;
+}
+html body main article section header p {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+  font-size: 0.9rem;
+}
+html body main article section div.tse-scrollable {
+  position: absolute;
+  top: 56.5%;
+  left: 8.1%;
+  z-index: 10;
+  width: 18%;
+  overflow: hidden;
+}
+html body main article section div.tse-scrollable .close {
+  font-size: 2.5rem;
   color: #fff;
   cursor: pointer;
-  background: center top no-repeat;
-  background-size: cover;
+  text-align: right;
+  margin-bottom: 1rem;
 }
-article section header h3 {
-  margin: 0 6px 6px;
-  padding-bottom: 6px;
-  border-bottom: #FFF 1px solid;
-  font-family: century;
-  font-size: 18px;
-}
-article section header p {
-  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
-  font-size: 15px;
-}
-article section p {
-  margin-top: 24px !important;
-}
-article section section {
-  padding: 0;
-  width: 100%;
-  display: none;
-  position: relative;
-  background: center 20% no-repeat scroll;
-  background-size: cover;
-  left: 0;
-  top: 0;
-  color: #fff;
-  z-index: 5;
-}
-article section section header {
-  height: auto;
-  cursor: auto;
-  border-top: #fff 3px double;
-  border-bottom: #fff 3px double;
-  margin: 280px 0 0;
-  padding: 18px 6px;
-}
-article section section header p {
-  font-size: 13.2px;
-}
-article section section h4 {
-  font-family: century;
-}
-article section section .r {
-  margin: 0 10% 0 60%;
-  padding: 2%;
-  background: url(../img/common/logo.png) no-repeat center 50px;
-  display: none;
-  overflow: auto;
-}
-article section section .l {
-  margin: 0 60% 0 10%;
-  padding: 2%;
-  background: url(../img/common/logo.png) no-repeat center 50px;
-  display: none;
-  overflow: auto;
-}
-article section section p a, article section section li a {
+html body main article section div.tse-scrollable p a, html body main article section div.tse-scrollable li a {
   color: #333333;
+  background-color: #fff;
   display: block;
-  margin-top: 12px;
-  padding: 12px;
-  font-size: 15px;
+  margin-top: 1rem;
+  padding: 0.5rem;
   text-align: center;
   opacity: 0.8;
   overflow: hidden;
 }
-article section section p a:hover, article section section li a:hover {
+html body main article section div.tse-scrollable p a:hover, html body main article section div.tse-scrollable li a:hover {
   opacity: 1;
 }
-article section section dl {
-  background: none;
-  border: none;
-  margin: 0 !important;
-  padding: 12px 0 0 !important;
-}
-article section section dl dt {
-  color: #fff;
-  float: left;
-  width: 7em;
-  text-align: left;
-  padding-top: 12px;
-}
-article section section dl dd {
-  margin: 0 !important;
-  padding: 12px 0 12px 7em;
-  overflow: visible;
-  text-align: left;
-}
-article section .close {
-  position: absolute;
-  top: 70px;
-  left: 93%;
-  z-index: 6;
-  display: none;
-  font-size: 72px;
-  color: #fff;
-  cursor: pointer;
-  padding: 12px;
-}
-article section#news {
-  width: 940px !important;
-  height: 36px !important;
-  margin-left: -530px;
-  padding: 12px 0 0 120px;
-  display: block;
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  z-index: 0;
-  float: none;
-  clear: left;
-  overflow: hidden !important;
+html body main article section div.tse-scrollable dl {
   background: none !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
-article section#news h3 {
-  width: 60px !important;
+html body main article section div.tse-scrollable dl dt {
+  color: #fff !important;
+}
+html body main article section div.tse-scrollable dl dd {
+  margin: 0 0 1rem 0;
+  padding: 0 0 1rem 0;
+  border-bottom: #fff 1px dotted;
+}
+html body main article section div.tse-scrollable dl dd:last-of-type {
+  border: none;
+}
+html body #news {
+  position: absolute;
+  top: 5.4rem;
+  left: 65%;
+  z-index: 6;
+  width: 45.5%;
+  background: none !important;
+  line-height: 100%;
+}
+@media all and (max-width: 1500px) {
+  html body #news {
+    position: absolute;
+    top: 11rem;
+    left: 1rem;
+    z-index: 3;
+    width: 100% !important;
+  }
+}
+html body #news h3 {
+  width: 10%;
+  padding: 0.2rem 0.5rem;
   background-color: #fff;
   color: #333333;
   font-weight: bold;
   text-align: center;
-  float: left;
-  font-size: 15.6px;
-  position: absolute;
-  top: 12px;
-  left: 0;
-  z-index: 3;
   font-family: century;
+  display: inline-block;
+  vertical-align: top;
 }
-article section#news ul {
-  position: relative;
+@media all and (max-width: 1500px) {
+  html body #news h3 {
+    width: 5%;
+    min-width: 4rem;
+    height: 1.6rem;
+  }
 }
-article section#news ul li {
-  width: 820px;
+html body #news #prev, html body #news #next {
+  display: inline-block;
+  margin-left: 1rem;
+  cursor: pointer;
   color: #fff;
+  font-size: 1.5rem;
 }
-article section#news ul li a {
-  color: #fff;
-  display: inline;
-  margin: 0 6px 0 0;
-  padding: 0;
-  font-size: 12px;
-  text-align: left;
-  opacity: 1;
-  text-decoration: underline;
+@media all and (max-width: 1500px) {
+  html body #news #prev, html body #news #next {
+    font-size: 1.25rem;
+  }
 }
-article section#news ul.pager {
+html body #news #prev {
   display: none;
 }
-article section#news .prev {
-  position: absolute;
-  top: 16.2px;
-  left: 70px;
-  z-index: 100;
-  cursor: pointer;
+html body #news div {
+  width: 100%;
+  background: none !important;
+  padding: 0;
+}
+html body #news div h3 {
+  width: 10%;
+  padding: 0.2rem 0;
+  background-color: #fff;
+  color: #333333;
+  font-weight: bold;
+  text-align: center;
+  font-family: century;
+  display: inline-block;
+  vertical-align: top;
+}
+@media all and (max-width: 1500px) {
+  html body #news div h3 {
+    width: 5%;
+  }
+}
+html body #news div ul {
+  margin-top: 0.5rem;
+  display: table;
+}
+html body #news div ul li {
+  display: table-cell;
   color: #fff;
 }
-article section#news .next {
-  position: absolute;
-  top: 16.2px;
-  left: 90px;
-  z-index: 100;
-  cursor: pointer;
+html body #news div ul li a {
   color: #fff;
+  margin: 0 0.5rem 0 0;
+  padding: 0;
+  text-decoration: underline;
 }
-
-#live {
+html body footer {
   position: absolute;
-  top: 80%;
-  left: 50%;
-  z-index: 1;
-  margin-left: -139px;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
 }
-
-#hero {
+html #live {
+  display: none;
+}
+html #vs {
+  position: absolute;
+  bottom: 10%;
+  right: 0.5%;
+  z-index: 10;
+  display: block;
+}
+html #vs.rotate {
+  transform: rotate(12deg);
+  transition: all 30s ease 0.5s;
+}
+html #hero {
   position: absolute;
   top: 75%;
   left: 50%;
   z-index: 1;
   margin-left: -80px;
-}
-
-.ie7 section dl, .ie8 section dl {
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#00FFFFFF,EndColorStr=#00FFFFFF);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#00FFFFFF,EndColorStr=#00FFFFFF)";
 }

@@ -38,7 +38,7 @@ h5 {
 		overflow: hidden;
 		color: $navy;
 		margin-left: 40px;
-		padding-top: $FS * 1.5;
+		padding-top: 1.5rem;
 	}
 	
 		#dates {
@@ -51,14 +51,14 @@ h5 {
 				float: left;
 				width: 160px;
 				height: 70px;
-				font-size: $FS*2;
+				font-size: 2rem;
 				text-align: center;
 				background: url('#{$ip}past/biggerdot.png') center bottom no-repeat;
 				
 					a {
 						line-height: 38px;
 						padding-bottom: 10px;
-						color: darken($navy , 70%);
+						color: lighten($navy , 10%);
 				
 						&.selected {
 							font-size: $FS * 4;
@@ -73,6 +73,7 @@ h5 {
 		width: $nf;
 		height: auto;
 		overflow: hidden;
+		font-size: 0.9rem;
 		
 		section {
 			width: $nf;

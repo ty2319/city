@@ -5,19 +5,19 @@
 
 #side {
 	@include fixB(35%,0,3);
-	right: $FS / 2;
+	right: 0.5rem;
 	text-align: right;
-	font-size: $FS * 1.25;
+	font-size: 0.9rem;
 	display: none;
 		
 		li {
 			list-style: none;
-			line-height: $FS * 2;
+			line-height: 1.5rem;
 			
 			 a {
 				color: $white;
 				text-decoration: none;
-				margin-left: 0.2em;
+				margin-left: 0.2rem;
 	
 				span {
 					display: none;

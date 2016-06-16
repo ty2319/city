@@ -1,36 +1,74 @@
 @charset "UTF-8";
 /* CSS Document */
-body {
-  font-size: 12px;
-  line-height: 150%;
+html {
+  font-size: 16px;
   font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
   color: #333333;
   min-width: 940px;
   background-color: #000;
 }
-
-a {
+html body {
+  background: center top no-repeat fixed;
+  background-size: cover;
+  line-height: 1.75rem;
+}
+@media all and (max-width: 940px) {
+  html body {
+    font-size: 0.75rem;
+  }
+}
+@media all and (max-width: 1500px) {
+  html body {
+    font-size: 0.875rem;
+  }
+}
+html body.bg0 {
+  background-image: url(../img/common/01.jpg);
+}
+html body.bg1 {
+  background-image: url(../img/common/02.jpg);
+}
+html body.bg2 {
+  background-image: url(../img/common/03.jpg);
+}
+html body.bg3 {
+  background-image: url(../img/common/04.jpg);
+}
+html body.bg4 {
+  background-image: url(../img/common/05.jpg);
+}
+html body.bg5 {
+  background-image: url(../img/common/06.jpg);
+}
+html body.bg6 {
+  background-image: url(../img/common/07.jpg);
+}
+html body.bg7 {
+  background-image: url(../img/common/08.jpg);
+}
+html body[class*=bg] {
+  background-position: center -300px;
+  transition: background-position 40s ease 1s;
+}
+html body a {
   color: #0033cc;
   text-decoration: none;
 }
-a:hover {
+html body a:hover {
   text-decoration: none;
 }
-
-img {
+html body img {
   border: none;
-  line-height: 100%;
+  line-height: 0;
   vertical-align: bottom;
 }
-
-#pagetop {
+html body #pagetop {
   position: fixed;
   bottom: -50px;
   right: 55px;
   z-index: 1;
 }
-
-#pagetop a {
+html body #pagetop a {
   display: block;
   width: 50px;
   height: 50px;
@@ -41,8 +79,7 @@ img {
   font-size: 24px;
   line-height: 50px;
 }
-
-#modal {
+html body #modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -51,17 +88,7 @@ img {
   height: 100%;
   background-color: rgba(26, 26, 26, 0.8);
 }
-
-#live {
-  position: fixed;
-  bottom: 75%;
-  right: 20px;
-  z-index: 1;
-  width: 278px;
-  height: 138px;
-}
-
-#hero {
+html body #hero {
   position: fixed;
   bottom: 75%;
   right: 20px;

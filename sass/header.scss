@@ -7,17 +7,21 @@ header#top {
 	width: $max;
 	background-color: $white;
 	overflow: hidden;
+	display: table;
+	padding: 10px 10px $FS 10px;
+	overflow: hidden;
 	
 	h1 {
-		padding: 10px 0 0 10px;
-		float: left;
+		display: table-cell;
 	}
 
 	#topnavi {
 		font-size: $FS * 0.8;
-		float: right;
 		color: #0033cc;
-		margin: 3em 1.5em 2em 0; 
+		display: table-cell;
+		text-align: right;
+		vertical-align: middle;
+		padding-top: 1rem;
 		
 		li {
 			display: inline;
@@ -25,71 +29,136 @@ header#top {
 		}
 	}
 }
-
-h2 {
-	@include abT(150px,50%,2);
-	margin-left: -100px;
-	width: 180px;
-	background: none;
-}
-
-.ie7,.ie8 {
-	#global h3 {
-		@include Modal;
-	}
-}
 		
 #global {
+	display: table;
+	width: $max;
 	position: $r;
+	z-index: 5;
+	background-color: $modal4;
+	line-height: 0.9rem;
 	
-	h3 {
-		@include nvh;
-		margin-top: -$FS*6;
-	
-		i {
-			@include hi;
+	&.fix {
+		@include fixT(0,0,5);
+	}
+
+	h2 {
+		width: $max * 0.21;
+		display: table-cell;
+		padding: 0.5rem 2rem 0.5rem 0.5rem;
+		
+		img {
+			width: $max;
+			min-width: 330px;
+			height: auto;
 		}
 	}
-		
-	dl {
-		@include nv;
-			
-		dt {
-			font-size: $FS * 1.75;
-			margin: 0.5em 0 0.5em 2em;
-			color: $white;
-			span {
-				font-size: $FS * 0.9;
-				-webkit-transform: scale(0.9);
-				margin-left: 1em;
-				font-family: century;
-			}
-		}
 	
-		dd {
-			@include nvli;
-			margin-left: -$FS;
-			text-indent: $FS * 3;
+	ul {
+		color: lighten($black, 40%);
+		display: table-cell;
+		white-space: nowrap;
+		
+		&:nth-of-type(1) {
+			vertical-align: top;
+			height: 4rem;
+			overflow: hidden;
+			
+			li {
+				display: table-cell;
+				padding-left: 2rem;
+				line-height:  0.8rem;
+				white-space: nowrap;
+				vertical-align: bottom;
 				
-				span {
-					margin: 3px $FS*0.8 0 0;
-				}
-				
-				i {
-					font-size: $FS;
-					font-style: normal;
-					font-family: century;
-					font-weight: normal;
-					margin-left: 1em;
+				&.on {
+					
+					a {
+						background-color: rgba($black , 0.7);
+					}
 				}
 			
 				a {
-					@include nva;
+					display: block;
+					padding: 1.4rem;
+					line-height: 0.9rem;
+					text-align: center;
+					padding: 1.46rem;
 					
-					&:hover {
-						color: $blue;
+					@include media($of) {
+						padding-bottom: 1.4rem;
+					}
+					
+					span {
+						font-size: 2rem;
+						float: left;
+						margin: -0.3rem 0.5rem 0;
 					}
 				}
+			}
+		}
+		
+		&:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4) {
+			display: none;
+			@include abT(5rem,0,11);
+			background-color: rgba($black , 0.8);
+			width: $max;
+			text-align: center;
+			
+			@include media($of) {
+				top: 4.92rem;
+			}
+			
+			li {
+				display: table-cell;
+				padding: 3rem;
+				opacity: 0;
+		
+				span {
+					font-size: 2rem;
+					display: block;
+					margin-bottom: 1rem;
+				}
+				
+				a:hover {
+					color: lighten($blue , 10%);
+				}
+			}
+		}
+		
+		a {
+			color: $white;
+			
+			&.active {
+				color: $blue;
+				text-decoration: line-through; 
+			}
+		}
+		
+		i {
+			font-style: normal;
+			font-family: century;
+			font-weight: normal;
+			font-size: 0.8rem;
+			display: block;
+			margin-top: 0.3rem;
+		}
+	}
+	
+	#live {
+		@include abB(0.5rem,1rem,3);
+		width: $max * 0.14;
+		min-width: 220px;
+		
+		@include media($ot) {
+			@include abT(6rem,1rem,3);
+			min-width: 200px;
+			width: $max * 0.25;
+		}
+		
+		img {
+			width: $max;
+			height: auto;
 		}
 	}
 }

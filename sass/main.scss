@@ -3,111 +3,88 @@
 
 @import "settings";
 
-#pan {
-	display: none;
-	@include fixT(0,0,2);
-	padding: $FS / 2;
-	width: $max;
-	color: $white;
-	background-color: $modal;
-}
-
-.ie7,.ie8 {
-	#pan {
-		@include Modal;
-	}
-}
-
 article {
 	width: $max;
 	clear: both;
-	background-color: $white;
+	position: $r;
+	background: url(#{$ip}common/dot.png);
+
+	#pan {
+		display: none;
+		@include fixB(0,0,1);
+		padding: 0.5rem;
+		width: $max;
+		color: $white;
+		background-color: $modal4;
+	}
 	
 		header#title {
 			text-align: center;
 			color: $white !important;
-			background: center center no-repeat fixed;
-			background-size: cover;
+			padding: 10rem 0 2rem 0;
+			transform: translateY(50px);
+			opacity: 0;
+			text-shadow: 0.1rem 0.1rem 0.1rem $black;
 			
-			&.bg0 {
-				background-image: url(#{$ip}common/01.jpg);
+			&.load {
+				transform: translateY(0);
+				opacity: 1;
+				transition: all 1s ease 0;
+				text-shadow: 3px rgba($black, 0.3);
 			}
 			
-			&.bg1 {
-				background-image: url(#{$ip}common/02.jpg);
-			}
-			
-			&.bg2 {
-				background-image: url(#{$ip}common/03.jpg);
-			}
-			
-			&.bg3 {
-				background-image: url(#{$ip}common/04.jpg);
-			}
-			
-			&.bg4 {
-				background-image: url(#{$ip}common/05.jpg);
-			}
-			
-			&.bg5 {
-				background-image: url(#{$ip}common/06.jpg);
-			}
-			
-			&.bg6 {
-				background-image: url(#{$ip}common/07.jpg);
-			}
-			
-			&.bg7 {
-				background-image: url(#{$ip}common/08.jpg);
-			}
-			
-			&.bg8 {
-				background-image: url(#{$ip}common/09.jpg);
-			}
-			
-			&.bg9 {
-				background-image: url(#{$ip}common/10.jpg);
-			}
-			
-			&.bg10 {
-				background-image: url(#{$ip}common/11.jpg);
-			}
 				
 			h3 {
-				font-size: $FS*3.25;
+				font-size: 2.5rem;
 				font-family: century;
+				
+				span {
+					display: block;
+					font-size: 4rem;
+					margin-bottom: 1rem;
+				}
 			}
 		
 			p {
-				margin-top: $FS*1.5;
-				font-size: $FS*1.5;
+				margin-top: 1rem;
+				font-size: 1.5rem;
 				font-weight: normal;
 				font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
 			}
 		}
 		
 	.half {
-		width: $max * 0.3995;
-		min-width: $nf * 0.3995;
+		width: $max / 2;
+		min-width: $nf / 2;
 		float: left;
 		clear: none;
 		border-color: lighten($black,50%);
 		border-style: dotted;
-		padding: $FS*10 $max*0.05 !important;
+		padding: 10rem $max*0.03 !important;
 	
 		h5,dl,ul,p,table {
-			margin: $FS 0;
+			margin: 1rem 0;
 		}
 	}
 		
 	.one_third {
 		width: $max / 3;
 		min-width: $nf * 0.27;
-		float: left;
 		clear: none;
+		padding: 0 $max*0.015 !important;
+		float: left;
+		
+		&:nth-of-type(3n-1) {
+			border-left: lighten($black,50%) dotted 1px;
+			border-right: lighten($black,50%) dotted 1px;
+		}
+		
+		section {
+			padding-top: 0 !important;
+		}
 		
 		p {
-			margin: 0 $FS*2 $FS*2 $FS*2;
+			margin: 0 1rem 2rem 1rem;
 		}
 		
 		img {
@@ -121,13 +98,14 @@ article {
 		min-width: $nf*0.9 / 4;
 		float: left;
 		clear: none;
-		padding: 0 !important;
+		padding: 1rem !important;
 		
-		h5,dl,p {
-			margin: $FS;
+		dl,p {
+			margin-top: 1rem;
 		}
 		
 		img {
+			width: $max;
 			height: auto;
 			min-width: 187.5px !important;
 		}
@@ -136,76 +114,92 @@ article {
 	div.contents,.double {
 		padding: 0 !important;
 		width: $max !important;
-	}
-	
-	.double {
 		
 		h4 {
-			margin-top: $FS*10;
-		}
-		
-		h5 {
-			margin-bottom: $FS*5 !important;
+			margin-top: 5rem;
 		}
 		
 		.half {
-			padding-top: $FS*5 !important;
+			padding-top: 0 !important;
 		}
+		
+		h5 {
+			margin-top: 5rem;
+		}
+		
+		&> img {
+			height: auto;
+			padding: 0 $max*0.015 !important;
+		}
+	}
+	.double .one_third {
+		padding-bottom: 5rem !important;
+		
+		 p {
+			overflow: hidden;
+			background: url(/symbol/hp/baseball/games/2016/city/img/mascot/line.gif) left 55px;
+			line-height: 28px;
+		 }
 	}
 		
 	section header {
 		text-align: center;
-		margin-bottom: $FS * 10;
+		margin-bottom: 5rem;
 		color: $navy;
 		
 		h4 {
-			font-size: $FS * 2.5;
+			font-size: 2rem;
 			line-height: $max;
 			font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
 		}
 		
 		p {
 			font-family: century;
-			margin: $FS/2 0 0 !important;
+			margin: 0.5rem 0 0 !important;
 		}
 	}
 
 	.contents {
-		width: $max * 0.9;
+		width: $max;
 		clear: both;
 		background: center center no-repeat fixed;
 		overflow: hidden;
 		background-size: cover;
-		padding: $FS*10 $max*0.05;
+		padding: 10rem $max*0.03;
 		
 		&.bg0 {
-			background-image: url(#{$ip}common/12.png);
+			background-image: url(#{$ip}common/09.png);
 		}
 		
 		&.bg1 {
-			background-image: url(#{$ip}common/13.png);
+			background-image: url(#{$ip}common/10.png);
 		}
 		
 		&.bg2 {
-			background-image: url(#{$ip}common/14.png);
+			background-image: url(#{$ip}common/11.png);
 		}
 		
 		&.bg3 {
-			background-image: url(#{$ip}common/15.png);
+			background-image: url(#{$ip}common/12.png);
 		}
 			
 		&.bg4 {
-			background-image: url(#{$ip}common/16.png);
+			background-image: url(#{$ip}common/13.png);
 		}
 		
 		&.bg5 {
-			background-image: url(#{$ip}common/17.png);
+			background-image: url(#{$ip}common/14.png);
 		}
 		
 		section {
-			padding: $FS*2 0;
+			padding: 5rem 0;
 			background: none;
-			
+		}
+		
+		&> img:not(.one_third) {
+			width: $max;
+			height: auto;
+			margin-bottom: 2rem;
 		}
 	
 		.back_gray,.back_gray th,.back_gray td {
@@ -223,24 +217,34 @@ article {
 			clear: both;
 			overflow: hidden;
 		}
+		
+		figure {
+			 font-size: 0.8rem;
+			 line-height: 1rem;
+			 margin-bottom: 3rem;
+			 text-align: center;
+			 
+			 figcaption {
+				 margin-top: 0.5rem;
+			}
+		}
 				
 		h5,caption {
 			color: $navy;
-			margin-bottom: $FS;
-			padding: $FS / 2;
-			font-size: $FS*1.75;
+			margin-bottom: 1rem;
+			padding: 0.5rem;
+			font-size: 1.25rem;
 			text-align: center;
-			font-weight: normal;
 			font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
 		}
 		
 		dl,.frame,.box {
-			padding: $FS;
+			padding: 1rem;
 			border: #999 3px double;
 			overflow: hidden;
 			zoom: 1;
 			background-color: $modal2;
-			margin: $FS;
+			margin: 0.5rem;
 		}
 						
 		dt {
@@ -248,7 +252,11 @@ article {
 			font-weight: bold;
 			clear: both;
 			text-align: center;
-			margin-bottom: $FS;
+			margin-top: 2rem;
+			
+			&:first-child {
+				margin: 0;
+			}
 		}
 			
 		dd {
@@ -265,15 +273,16 @@ article {
 		}
 		
 		.box {
-			margin: $FS 0 0 0 !important;
+			margin: 1rem 0 0 0 !important;
 			
 			dt {
 				float: left;
+				margin-top: 0;
 			}
 		
 			dd {
 				text-align: left;
-				margin-bottom: $FS;
+				margin-bottom: 1rem;
 			}
 		}
 	}
@@ -287,34 +296,11 @@ article {
 	}	
 	
 	.zerofive {
-		padding-top: $FS/2 !important;
-		padding-top: $FS !important;
+		padding-top: 0.5rem !important;
+		padding-top: 1rem !important;
 	}
 	
 	.bottom {
-		padding-bottom: $FS !important;
-	}
-}
-
-.ie7,.ie8 {
-	
-	section dl,.frame {
-		@include Modal2;
-	}
-	
-	.border thead th,.enemy thead th,.b_e {
-		background-color: $modal;
-		filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#66000000,EndColorStr=#66000000);
-		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#66000000,EndColorStr=#66000000)";
-	}
-
-	.back_gray,.back_gray th,.back_gray td {
-		background-color: $modal;
-		filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#11000000,EndColorStr=#11000000);
-		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#11000000,EndColorStr=#11000000)";
-	}
-
-	.back_white,.back_white th,.back_white td {
-		@include Modal2;
+		padding-bottom: 1rem !important;
 	}
 }

@@ -3,293 +3,270 @@
 
 @import "settings";
 
-h2 {
-	@include abT(35%,5%,2);
-}
-
-#global {
+html {
 	
-	 h3 {
-		top: $max * 0.6;
-		left: $max / 2;
-		margin: 0 0 0 -80px;
-		background: none;
-	}
-	
-	dl {
-		top: $max * 0.55;
-	}
-}
-
-aside {
-	
-	 h3 {
-		top: $max * 0.6;
-		left: $max / 2;
-		margin-left: 20px;
-		background: none;
-	}
-	
-	dl {
-		top: $max * 0.6;
-	}
-	
-}
-
-article {
-	overflow: hidden !important;
-	
-	#button {
-		@include abB(5%,5%,5);
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: flex-start;
-		align-items: stretch;
-	
-		li {
-			background-color: $black;
-			color: $white;
-			text-align: center;
-			cursor: pointer;
-			font-weight: bold;
-			min-width: 50px;
-			min-height: 50px;
-			margin-left: 1px;
-			opacity: .7;
-		}
-	}
-	
-	#back {
-		@include abT(0,0,1);
-		width: $max;
-		height: $max;
-		overflow: hidden;
+	body {
+		overflow-x: hidden;
 		
-		div {
-			width: $max;
-			height: $max;
-			background: url(img/1.jpg) no-repeat center center;
-			background-size: cover;
+		&[class*=bg] {
+			background: none;
+		}
+		
+		@include media($nf) {
+			overflow-x: visible;
+		}
+
+		header#top {
+			position: $r;
+			z-index: 2;
+		}
+		
+		#back {
+			@include abT(0,0,1);
+			overflow: hidden;
 			
-			&.inner {
-				transform: scale(1.5 , 1.5) rotate(15deg);
-				transition: all 30s ease 0.5s;
-				z-index: 1;
+			div {
+				background: url(#{$ip}top/4.jpg), url(#{$ip}top/0.jpg), url(#{$ip}top/1.jpg), url(#{$ip}top/2.jpg), url(#{$ip}top/3.jpg) no-repeat center center;
+				background-size: cover;
+				width: $max;
+				height: $max;
+				
+				&.inner {
+					transform: scale(1.5 , 1.5) rotate(12deg);
+					transition: all 30s ease 0.5s;
+				}
 			}
 		}
-	}
-	
-	main {
-		@include abT(0,0,1);
-		width: $max;
-		height: $max;
 		
-		&>div {
-			@include abT(0,0,2);
-			background-color: $black;
+			
+		main {
+			@include abT(0,0,1);
+			background: url(#{$ip}common/dot.png);
+			
+			&>div {
+				position:absolute;
+				background-color: $black;
+			}
+			
+			article {
+				background: none;
+				height: $max;
+				border-right: $max*0.05 rgba($black,80%) solid;
+			
+				#button {
+					@include abT(55%,0,10);
+					font-family: century;
+				
+					li {
+						background-color: $navy;
+						color: $white;
+						text-align: center;
+						cursor: pointer;
+						min-width: 50px;
+						min-height: 50px;
+						margin-bottom: 1px;
+						padding-top: $max * 0.3;
+						opacity: .8;
+						font-size: 0.9rem;
+						font-weight: bold;
+						
+						&.on {
+							background-color: $black;
+						}
+					}
+				}
+				
+				section {
+					color: $white;
+					display: none;
+					min-width: 203px;
+					padding: 0 !important;
+					background: none !important;
+					overflow: auto;
+					height: $max;
+					line-height: 1.75rem;
+					
+					header {
+						@include abT(45%,27%,3);
+						width: $max * 0.1 !important;
+						color: #fff;
+						margin: 0;
+						
+						&:after {
+							content: "";
+						}
+						
+						h3 {
+							font-family: century;
+							font-size: 1.25rem;
+						}
+					
+						p {
+							font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+							font-size: 0.9rem;
+						}
+					}
+					
+					div.tse-scrollable {
+						@include abT(56.5%,8.1%,10);
+						width: $max * 0.18;
+						overflow: hidden;
+										
+						.close {
+							font-size: 2.5rem;
+							color: #fff;
+							cursor: pointer;
+							text-align: right;
+							margin-bottom: 1rem;
+						}
+						
+						p a,li a {
+							color: lighten($black,20%);
+							background-color: $white;
+							display: block;
+							margin-top: 1rem;
+							padding: 0.5rem;
+							text-align: center;
+							opacity: 0.8;
+							overflow: hidden;
+							
+							&:hover {
+								opacity: 1;
+							}
+						}
+						
+						dl {
+							background: none !important;
+							border: none !important;
+							margin: 0 !important;
+							padding: 0 !important;
+							
+							dt {
+								color: $white !important;
+							}
+							
+							dd {
+								margin: 0 0 1rem 0;
+								padding: 0 0 1rem 0;
+								border-bottom: $white 1px dotted;
+								
+								&:last-of-type {
+									border: none;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
-	}
-
-	section {
-		@include abB(0,5%,3);
-		color: $white;
-		display: none;
-		min-width: 203px;
 		
-		 header {
-			width: $max;
-			height: $max;
-			text-align: center;
-			color: #fff;
-			cursor: pointer;
-			background: center top no-repeat;
-			background-size: cover;
+		#news {
+			@include abT(5.4rem,65%,6);
+			width: $max * 0.455;
+			background: none !important;
+			line-height: $max;
+			
+			@include media($of) {
+				@include abT(11rem,1rem,3);
+				width: $max !important;
+			}
 			
 			h3 {
-				margin: 0 $FS/2 $FS/2;
-				padding-bottom: $FS/2;
-				border-bottom: #FFF 1px solid;
-				font-family: century;
-				font-size: $FS * 1.5;
-			}
-		
-			p {
-				font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
-				font-size: $FS * 1.25;
-			}
-		}
-		
-		p {
-			margin-top: $FS * 2 !important;
-		}
-		
-		section {
-			padding: 0;
-			width: $max;
-			display: none;
-			position: $r;
-			background: center $max*0.2 no-repeat scroll;
-			background-size: cover;
-			left: 0;
-			top: 0;
-			color: #fff;
-			z-index: 5;
-			
-			header {
-				height: auto;
-				cursor: auto;
-				border-top: #fff 3px double;
-				border-bottom: #fff 3px double;
-				margin: 280px 0 0;
-				padding: $FS*1.5 $FS/2;
-		
-				p {
-					font-size: $FS * 1.1;
-				}
-			}
-			
-			h4 {
-				font-family: century;
-			}
-			
-			.r {
-				margin: 0 $max*0.1 0 $max*0.6;
-				padding: $max * 0.02;
-				background: url(#{$ip}common/logo.png) no-repeat center 50px;
-				display: none;
-				overflow: auto;
-			}
-			
-			.l {
-				margin: 0 $max*0.6 0 $max*0.1;
-				padding: $max * 0.02;
-				background: url(#{$ip}common/logo.png) no-repeat center 50px;
-				display: none;
-				overflow: auto;
-			}
-			
-			p a,li a {
-				color: lighten($black,20%);
-				display: block;
-				margin-top: $FS;
-				padding: $FS;
-				font-size: $FS * 1.25;
+				width: $max * 0.1;
+				padding: 0.2rem 0.5rem;
+				background-color: $white;
+				color: lighten($black, 20%);
+				font-weight: bold;
 				text-align: center;
-				opacity: 0.8;
-				overflow: hidden;
-				&:hover {
-					opacity: 1;
+				font-family: century;
+				display: inline-block;
+				vertical-align: top;
+			
+				@include media($of) {
+					width: $max * 0.05;
+					min-width: 4rem;
+					height: 1.6rem;
+				}
+			}
+				
+			#prev,#next {
+				display: inline-block;
+				margin-left: 1rem;
+				cursor: pointer;
+				color: $white;
+				font-size: 1.5rem;
+			
+				@include media($of) {
+					font-size: 1.25rem;
 				}
 			}
 			
-			dl {
-				background: none;
-				border: none;
-				margin: 0 !important;
-				padding: $FS 0 0 !important;
-				
-				dt {
-					color: $white;
-					float: left;
-					width: 7em;
-					text-align: left;
-					padding-top: $FS
-				}
-				
-				dd {
-					margin: 0 !important;
-					padding: $FS 0 $FS 7em;
-					overflow: visible;
-					text-align: left;
-				}
+			#prev {
+				display: none;
 			}
-		}
 			
-		.close {
-			@include abT(70px,93%,6);
-			display: none;
-			font-size: $FS * 6;
-			color: #fff;
-			cursor: pointer;
-			padding: $FS;
-		}
-		
-		&#news {
-			width: $nf !important;
-			height: $FS * 3 !important;
-			margin-left: -530px;
-			padding: $FS 0 0 120px;
-			display: block;
-			@include abT(80px,50%,0);
-			float: none;
-			clear: left;
-			overflow: hidden !important;
-			background: none !important;
-			
+			div {
+				width: $max;
+				background: none !important;
+				padding: 0;
+				
 				h3 {
-					width: $FS * 5 !important;
+					width: $max * 0.1;
+					padding: 0.2rem 0;
 					background-color: $white;
 					color: lighten($black, 20%);
 					font-weight: bold;
 					text-align: center;
-					float: left;
-					font-size: $FS * 1.3;
-					@include abT($FS,0,3);
 					font-family: century;
+					display: inline-block;
+					vertical-align: top;
+				
+					@include media($of) {
+						width: $max * 0.05;
+					}
 				}
 				
 				ul {
-					position: $r;
+					margin-top: 0.5rem;
+					display: table;
 						
-						li {
-							width: 820px;
+					li {
+						display: table-cell;
+						color: $white; 
+						
+						a {
 							color: $white;
-							
-							a {
-								color: $white;
-								display: inline;
-								margin: 0 $FS/2 0 0;
-								padding: 0;
-								font-size: $FS;
-								text-align: left;
-								opacity: 1;
-								text-decoration: underline;
-							}
+							margin: 0 0.5rem 0 0;
+							padding: 0;
+							text-decoration: underline;
 						}
-						
-						&.pager {
-							display: none;
-						}
+					}
 				}
-				
-			.prev {
-				@include abT($FS*1.35,70px,100);
-				cursor: pointer;
-				color: $white;
-			}
-				
-			.next {
-				@include abT($FS*1.35,90px,100);
-				cursor: pointer;
-				color: $white;
 			}
 		}
-	}	
-}
-
-#live {
-	@include abT(80%,50%,1);
-	margin-left: -139px;
-}
-
-#hero {
-	@include abT(75%,50%,1);
-	margin-left: -80px;
-}
-
-.ie7,.ie8 {
-	section dl {
-		filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#00FFFFFF,EndColorStr=#00FFFFFF);
-		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#00FFFFFF,EndColorStr=#00FFFFFF)";
+		
+		footer {
+			@include abB(0,0,10);
+			width: $max;
+		}
+	}
+	
+	#live {
+		display: none;
+	}
+	
+	#vs {
+		@include abB(10%,0.5%,10);
+		display: block;
+		
+		&.rotate {
+			transform: rotate(12deg);
+			transition: all 30s ease 0.5s;
+		}
+	}
+	
+	#hero {
+		@include abT(75%,50%,1);
+		margin-left: -80px;
 	}
 }
