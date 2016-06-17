@@ -43,7 +43,7 @@ header#top {
 	}
 
 	h2 {
-		width: $max * 0.21;
+		width: $max * 0.2;
 		display: table-cell;
 		padding: 0.5rem 2rem 0.5rem 0.5rem;
 		
@@ -83,7 +83,6 @@ header#top {
 					padding: 1.4rem;
 					line-height: 0.9rem;
 					text-align: center;
-					padding: 1.46rem;
 					
 					@include media($of) {
 						padding-bottom: 1.4rem;
@@ -100,19 +99,16 @@ header#top {
 		
 		&:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4) {
 			display: none;
-			@include abT(5rem,0,11);
+			@include abT(4.9rem,0,11);
 			background-color: rgba($black , 0.8);
 			width: $max;
 			text-align: center;
-			
-			@include media($of) {
-				top: 4.92rem;
-			}
 			
 			li {
 				display: table-cell;
 				padding: 3rem;
 				opacity: 0;
+				vertical-align: top;
 		
 				span {
 					font-size: 2rem;

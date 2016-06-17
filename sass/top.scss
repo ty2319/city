@@ -256,7 +256,7 @@ html {
 	}
 	
 	#vs {
-		@include abB(10%,0.5%,10);
+		@include abB(10%,0.5%,4);
 		display: block;
 		transform: rotate(12deg);
 	}

@@ -97,29 +97,32 @@
 		if(path.match("tournament")){
 			$('nav#global a').eq(5).addClass('active');
 	　　}
-		if(path.match("results")){
+		/*if(path.match("results")){
 			$('nav#global a').eq(6).addClass('active');
 	　　}
 		if(path.match("gallery")){
 			$('nav#global a').eq(7).addClass('active');
-	　　}
+	　　}*/
 		if(path.match("aid")){
-			$('nav#global a').eq(8).addClass('active');
+			$('nav#global a').eq(6).addClass('active');
 	　　}
 		if(path.match("access")){
+			$('nav#global a').eq(7).addClass('active');
+	　　}
+		if(path.match("addition")){
+			$('nav#global a').eq(8).addClass('active');
+	　　}
+		/*if(path.match("mascot")){
 			$('nav#global a').eq(9).addClass('active');
 	　　}
 		if(path.match("hero")){
-			$('nav#global a').eq(10).addClass('active');
-	　　}
-		if(path.match("mascot")){
-			$('nav#global a').eq(11).addClass('active');
-	　　}
-		if(path.match("history")){
 			$('nav#global a').eq(12).addClass('active');
+	　　}*/
+		if(path.match("history")){
+			$('nav#global a').eq(9).addClass('active');
 	　　}
 		if(path.match("past")){
-			$('nav#global a').eq(13).addClass('active');
+			$('nav#global a').eq(10).addClass('active');
 	　　}
 	
 		$('#global ul:first a').each(function(i) {

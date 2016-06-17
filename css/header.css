@@ -38,7 +38,7 @@ header#top #topnavi li {
   z-index: 5;
 }
 #global h2 {
-  width: 21%;
+  width: 20%;
   display: table-cell;
   padding: 0.5rem 2rem 0.5rem 0.5rem;
 }
@@ -72,7 +72,6 @@ header#top #topnavi li {
   padding: 1.4rem;
   line-height: 0.9rem;
   text-align: center;
-  padding: 1.46rem;
 }
 @media all and (max-width: 1500px) {
   #global ul:nth-of-type(1) li a {
@@ -87,22 +86,18 @@ header#top #topnavi li {
 #global ul:nth-of-type(2), #global ul:nth-of-type(3), #global ul:nth-of-type(4) {
   display: none;
   position: absolute;
-  top: 5rem;
+  top: 4.9rem;
   left: 0;
   z-index: 11;
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   text-align: center;
 }
-@media all and (max-width: 1500px) {
-  #global ul:nth-of-type(2), #global ul:nth-of-type(3), #global ul:nth-of-type(4) {
-    top: 4.92rem;
-  }
-}
 #global ul:nth-of-type(2) li, #global ul:nth-of-type(3) li, #global ul:nth-of-type(4) li {
   display: table-cell;
   padding: 3rem;
   opacity: 0;
+  vertical-align: top;
 }
 #global ul:nth-of-type(2) li span, #global ul:nth-of-type(3) li span, #global ul:nth-of-type(4) li span {
   font-size: 2rem;

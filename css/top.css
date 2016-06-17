@@ -246,12 +246,9 @@ html #vs {
   position: absolute;
   bottom: 10%;
   right: 0.5%;
-  z-index: 10;
+  z-index: 4;
   display: block;
-}
-html #vs.rotate {
   transform: rotate(12deg);
-  transition: all 30s ease 0.5s;
 }
 html #hero {
   position: absolute;
