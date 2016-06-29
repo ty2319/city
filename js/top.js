@@ -212,12 +212,6 @@
 				var spot = $(this);
 				spot.attr('id','news' + (i));
 				spot.width(nw);
-				
-				$(window).resize(function() {
-					if ($(window).width() <= 1500) {
-						spot.width($(window).width());
-					}
-				});
 			});
 			
 			function startTimer(){

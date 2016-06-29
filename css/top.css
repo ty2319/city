@@ -182,6 +182,7 @@ html body #news h3 {
 @media all and (max-width: 1500px) {
   html body #news h3 {
     width: 5%;
+    padding: 0.4rem 0.5rem 0 0.5rem;
     min-width: 4rem;
     height: 1.6rem;
   }
