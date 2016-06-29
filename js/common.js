@@ -109,13 +109,13 @@
 		if(path.match("access")){
 			$('nav#global a').eq(7).addClass('active');
 	　　}
-		if(path.match("addition")){
+		/*if(path.match("addition")){
+			$('nav#global a').eq(7).addClass('active');
+	　　}*/
+		if(path.match("mascot")){
 			$('nav#global a').eq(8).addClass('active');
 	　　}
-		/*if(path.match("mascot")){
-			$('nav#global a').eq(9).addClass('active');
-	　　}
-		if(path.match("hero")){
+		/*if(path.match("hero")){
 			$('nav#global a').eq(12).addClass('active');
 	　　}*/
 		if(path.match("history")){

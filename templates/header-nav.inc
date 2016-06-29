@@ -22,8 +22,8 @@
 		<li><a href="/symbol/hp/baseball/games/2016/city/access.html"><span class="fa fa-map-marker"></span>アクセスガイド<i>Guidance to a stadium</i> </a> </li>
 	</ul>
 	<ul id="topics">
-		<li><a href="/symbol/hp/baseball/games/2016/city/addition.html"><span class="fa fa-plus"></span>補強選手 2016<i>Additional Player</i></a></li>
-		<li><!--<a href="/symbol/hp/baseball/games/2016/city/mascot.html">--><span class="fa fa-pencil-square-o"></span>マスコットの会場リポート<i>Comming soon<!--The mascot's game report--></i><!--</a>--></li>
+		<li><!--<a href="/symbol/hp/baseball/games/2016/city/addition.html">--><span class="fa fa-plus"></span>補強選手 2016<i><!--Additional Player-->Comming soon</i><!--</a>--></li>
+		<li><a href="/symbol/hp/baseball/games/2016/city/mascot.html"><span class="fa fa-pencil-square-o"></span>マスコットの会場リポート<i>The mascot's game report</i></a></li>
 		<!--<li><a href="/symbol/hp/baseball/games/2016/city/hero.html"><span class="fa fa-microphone"></span>ヒーローインタビュー<i>Hero Interview</i></a></li>-->
 		<li><a href="/symbol/hp/baseball/games/2016/city/history.html"><span class="fa fa-trophy"></span>都市対抗野球とNTTグループの歴史<i>History</i></a></li>
 		<li><a href="/symbol/hp/baseball/games/2016/city/past.html"><span class="fa fa-book"></span>NTT西日本 過去の戦績<i>The past results</i></a></li>

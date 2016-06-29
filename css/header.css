@@ -39,12 +39,12 @@ header#top #topnavi li {
 }
 #global h2 {
   width: 20%;
+  min-width: 380px;
   display: table-cell;
   padding: 0.5rem 2rem 0.5rem 0.5rem;
 }
 #global h2 img {
   width: 100%;
-  min-width: 330px;
   height: auto;
 }
 #global ul {

@@ -17,8 +17,8 @@
 			fh = $('footer').outerHeight();
 			middle = h - hh - fh;
 			
-			if (w < 940) {
-				wh = 50.75
+			if (w < 1200) {
+				wh = 60.75
 			}
 			ssize = wh*0.7;
 			
@@ -27,9 +27,7 @@
 			$('main > div.btm:not(.active)').width(ssize).height(ssize);
 			$('#back div').addClass('inner');
 			$('section div.tse-scrollable').width(w*0.18).height(wh * 3.7).TrackpadScrollEmulator();
-			if ($(window).width() < 1500) {
-				$('#news li').width($(window).width());
-			}
+			$('#news li:first-child').addClass('current');
 		}
 	
 		start = function() {
@@ -84,7 +82,7 @@
 							param		= {
 								width	: wh,
 								height	: wh,
-								top	: (middle * 0.55) + (wh * Math.floor(i/4)),
+								top	: (middle * 0.54) + (wh * Math.floor(i/4)),
 								left	: (w * 0.07) + (wh * (i%4)),
 								opacity	: 0.7,
 								zIndex	: 2
@@ -103,7 +101,7 @@
 							param		= {
 								width	: wh * 0.7,
 								height	: wh * 0.7,
-								top		: (middle * 0.35) + ((wh * 0.7) * Math.floor(i/4)),
+								top		: (middle * 0.34) + ((wh * 0.7) * Math.floor(i/4)),
 								left	: (w * 0.25) + ((wh * 0.7) * (i%4)),
 								opacity	: 0.7,
 								zIndex	: 1
@@ -182,14 +180,14 @@
 		active = function() {	
 			
 			$('main div.btm.active').each(function(i) {
-				var t = (middle * 0.55) + (wh * Math.floor(i/4)),
+				var t = (middle * 0.54) + (wh * Math.floor(i/4)),
 				l = (w * 0.07) + (wh * (i%4));
 				
 				$(this).css({'width' : wh,'height': wh , 'top': t , 'left': l , 'opacity': 0.7});
 			});
 			
 			$('main div.tp.active').each(function(i) {
-				var t = (middle * 0.35) + ((wh * 0.7) * Math.floor(i/4)),
+				var t = (middle * 0.34) + ((wh * 0.7) * Math.floor(i/4)),
 					l = (w * 0.25) + ((wh * 0.7) * (i%4));
 				
 				$(this).css({'width' : wh * 0.7,'height': wh * 0.7 , 'top': t , 'left': l , 'opacity': 0.7});
@@ -208,16 +206,18 @@
 			
 			$('#prev').hide();
 			
-			if (cnt == 1 ) {
-				$('#prev,#next').hide();
-			}
-			
 			$('#news ul').width(nw * cnt);
 			
 			$('#news li').each(function(i){
 				var spot = $(this);
 				spot.attr('id','news' + (i));
 				spot.width(nw);
+				
+				$(window).resize(function() {
+					if ($(window).width() <= 1500) {
+						spot.width($(window).width());
+					}
+				});
 			});
 			
 			function startTimer(){
@@ -292,6 +292,11 @@
 				
 				return false;
 			});
+			
+			if (cnt == 1 ) {
+				$('#prev,#next').hide();
+				stopTimer();
+			}
 		}
 		
 	$(document).ready(function() {

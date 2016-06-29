@@ -54,7 +54,7 @@ html {
 				border-right: $max*0.05 rgba($black,80%) solid;
 			
 				#button {
-					@include abT(55%,0,10);
+					@include abT(54%,0,10);
 					font-family: century;
 				
 					li {
@@ -62,10 +62,10 @@ html {
 						color: $white;
 						text-align: center;
 						cursor: pointer;
-						min-width: 50px;
-						min-height: 50px;
+						min-width: 60px;
+						min-height: 60px;
 						margin-bottom: 1px;
-						padding-top: $max * 0.3;
+						padding-top: $max * 0.35;
 						opacity: .8;
 						font-size: 0.9rem;
 						font-weight: bold;
@@ -79,7 +79,6 @@ html {
 				section {
 					color: $white;
 					display: none;
-					min-width: 203px;
 					padding: 0 !important;
 					background: none !important;
 					overflow: auto;
@@ -108,9 +107,13 @@ html {
 					}
 					
 					div.tse-scrollable {
-						@include abT(56.5%,8.1%,10);
+						@include abT(55.5%,8.1%,10);
 						width: $max * 0.18;
 						overflow: hidden;
+						
+						@include media($ot) {
+							width: 220px !important;
+						}
 										
 						.close {
 							font-size: 2.5rem;
@@ -168,7 +171,7 @@ html {
 			
 			@include media($of) {
 				@include abT(11rem,1rem,3);
-				width: $max !important;
+				width: $max;
 			}
 			
 			h3 {

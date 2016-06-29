@@ -16,7 +16,7 @@
 <meta property="og:image" content="http://www.ntt-west.co.jp/favicon.ico" />
 <link rel="stylesheet" href="css/import.css" />
 </head>
-<body id="mascot" style="background-image: url(img/mascot/mainvisual.jpg)">
+<body>
 <!--#include virtual="templates/header-nav.inc"-->
 <main role="main">
 	<article>
@@ -24,15 +24,15 @@
 			<h3><span class="fa fa-pencil-square-o"></span>The mascot's game report</h3>
 			<p>マスコットの会場リポート</p>
 		</header>
-		<nav id="side" role="navigation">
+		<!--<nav id="side" role="navigation">
 			<ol>
 				<li><a href="#3rd"><span>【準々決勝】VS 日本生命</span></a></li>
 				<li><a href="#2nd"><span>【2回戦】VS 三菱重工広島</span></a></li>
 				<li><a href="#1st"><span>【1回戦】VS 四国銀行</span></a></li>
 				<li><a href="#intro"><span>マスコットのご紹介</span></a></li>
 			</ol>
-		</nav>
-		<section id="3rd" class="double">
+		</nav>-->
+		<!--<section id="3rd" class="double">
 			<header>
 				<h4>11月7日（土）【準々決勝】 VS 日本生命</h4>
 				<p>Sat.,November 7 [Quarter Final] VS Nippon Life Insurance Company</p>
@@ -216,35 +216,36 @@
 					2度も同じ相手に負けるわけにはいきません。<br>
 					NTT西日本硬式野球部への熱い応援よろしくお願いします！ </p>
 			</section>
-		</section>
-		<section id="intro" class="double">
+		</section>-->
+		<section class="double">
 			<header>
 				<h4>マスコットのご紹介</h4>
 				<p>Introduction of a mascot</p>
 			</header>
-			<img src="img/mascot/maeda.jpg">
-			<section class="half">
-				<h5>プロフィール</h5>
+<section class="half">
+				<h5 style="margin: 0;">プロフィール</h5>
 				<dl class="box">
 					<dt>名　前</dt>
-					<dd>前田　智美（まえだ　ともみ）</dd>
+					<dd>南 優生（みなみ　ゆうき）</dd>
 					<dt>会社名</dt>
-					<dd>株式会社エヌ・ティ・ティマーケティングアクト</dd>
+					<dd>ＮＴＴビジネスアソシエ西日本</dd>
 					<dt>所属先</dt>
-					<dd>東海支店　名古屋営業部<br>
-						光コラボレーション営業部門<br>
-						光コラボレーション営業担当 </dd>
+					<dd>財務サービス事業部　財務税務部門　営業・共通系会社決算担当</dd>
 				</dl>
-			</section>
-			<section class="half">
 				<h5>マスコットとしての意気込み</h5>
-				<p>第86回都市対抗野球大会に引続き、第41回社会人野球日本選手権でNTT西日本硬式野球部マスコットを務めさせていただきます前田 智美です。</p>
-				<p>都市対抗野球大会では、グループ会社の方々も含め、全国各地から応援にお越しいただき、ありがとうござました。<br>
-					一体感のある応援は、絶対に選手皆様の力になったと思います。</p>
-				<p>都市対抗野球大会ではチームに帯同の上、選手に１番近いところから応援をすることができ、大変感動しました。</p>
-				<p>都市対抗での悔しさをバネに、日本選手権ではより一層の活躍をしてもらえるよう、全力で応援したいと思います！！<br>
-					是非、皆様も会場まで足を運んで頂き、NTT西日本硬式野球部への熱い応援、よろしくお願いします！</p>
+				<p>今回マスコットとして野球部の一員となり優勝をめざすことができること、たいへん光栄に感じております。</p>
+				<p>
+今回2年連続での本戦出場となりますが、本戦の切符を獲得するまでに選手たちの懸命な努力や社員の応援が必要不可欠でした。</p>
+<p>今後の本戦においても選手たちはプレッシャーの中、日々戦うことになり、そこではより一層の応援が必要となります。</p>
+<p>そんな野球部のこれまでの努力や社員の想いを結果として残せるように、マスコットとして懸命にサポートしていきたいと思っております。</p>
+<p>
+また野球をつうじてNTT西日本グループ社員全員と感動を
+共有できるようリポートや応援に力を注ぎたいです！</p>
+<p>"一丸突破　～躍動し感動を～　<br>
+一緒に優勝めざして頑張りましょう！<br>
+皆様も熱い応援よろしくお願いします！</p>
 			</section>
+			<img src="img/mascot/mascot.jpg" class="half">
 		</section>
 		<p id="pan">第87回都市対抗野球大会 ≫ マスコットの会場リポート</p>
 	</article>
@@ -255,8 +256,6 @@
 <script type="text/javascript" src="js/jquery.tile.js"></script> 
 <script>
 	$(window).on('load resize' , function () {
-		
-　　	$('.half').tile();
 　　	$('.double > .one_third').tile(3);
 　　	$('.double > .one_third > h5').tile(3);
 　　	$('.double > .one_third > figure').tile(3);

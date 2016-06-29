@@ -44,12 +44,12 @@ header#top {
 
 	h2 {
 		width: $max * 0.2;
+		min-width: 380px;
 		display: table-cell;
 		padding: 0.5rem 2rem 0.5rem 0.5rem;
 		
 		img {
 			width: $max;
-			min-width: 330px;
 			height: auto;
 		}
 	}

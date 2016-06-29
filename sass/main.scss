@@ -81,6 +81,10 @@ article {
 		
 		section {
 			padding-top: 0 !important;
+		
+			h5 {
+				margin-top: 0 !important;
+			}
 		}
 		
 		p {
@@ -130,6 +134,7 @@ article {
 		&> img {
 			height: auto;
 			padding: 0 $max*0.015 !important;
+			border: none;
 		}
 	}
 	.double .one_third {
@@ -196,7 +201,7 @@ article {
 			background: none;
 		}
 		
-		&> img:not(.one_third) {
+		&> img:not(.one_third):not(.half) {
 			width: $max;
 			height: auto;
 			margin-bottom: 2rem;

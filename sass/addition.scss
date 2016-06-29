@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+	
+article {
+	&>div {
+		
+		&.contents {
+			position: $r;
+			padding: $max * 0.03 !important;
+			
+			&>section.half {
+				background-color: $white !important;
+				@include abT(6%,100%,1);
+				width: $max * 0.47;
+				overflow: auto;
+				padding: 0 $max*0.03!important;
+				
+				&:first-of-type {
+					left: $max * 0.03;
+				}
+				
+				header {
+					margin-bottom: 0;
+					
+					h4 {
+						margin-top: 3rem;
+					}
+				}
+			}
+			
+			&>img.half {
+				margin-left: $max  / 2;
+				padding: 0 !important;
+			}
+		}
+	}
+	
+	ul {
+		@include abB(5.5%,50%,2);
+		display: table;
+		background-color: rgba($black , 70%);
+		text-align: center;
+		margin-right: -5rem;
+		
+		li {
+			display: table-cell;
+			padding: 1rem;
+			
+			a {
+				color: $white;
+				
+				&.show {
+					color: $blue;
+				}
+			}
+		}
+	}
+}

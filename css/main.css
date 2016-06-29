@@ -72,6 +72,9 @@ article .one_third:nth-of-type(3n-1) {
 article .one_third section {
   padding-top: 0 !important;
 }
+article .one_third section h5 {
+  margin-top: 0 !important;
+}
 article .one_third p {
   margin: 0 1rem 2rem 1rem;
 }
@@ -110,6 +113,7 @@ article div.contents h5, article .double h5 {
 article div.contents > img, article .double > img {
   height: auto;
   padding: 0 1.5% !important;
+  border: none;
 }
 article .double .one_third {
   padding-bottom: 5rem !important;
@@ -163,7 +167,7 @@ article .contents section {
   padding: 5rem 0;
   background: none;
 }
-article .contents > img:not(.one_third) {
+article .contents > img:not(.one_third):not(.half) {
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
