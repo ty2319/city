@@ -92,10 +92,18 @@ html {
 		}
 		
 		#modal {
-			@include fixT(0,0,2);
+			@include fixT(0,0,5);
 			width: $max;
 			height: $max;
-			background-color: lighten($modal,10%);
+			background-color: $modal;
+		}
+		
+		#close {
+			@include fixT(20%,77.5%,6);
+			font-size: 4rem;
+			display: none;
+			color: $white;
+			cursor: pointer;
 		}
 		
 		#hero {

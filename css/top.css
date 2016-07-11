@@ -6,11 +6,6 @@ html body {
 html body[class*=bg] {
   background: none;
 }
-@media all and (max-width: 940px) {
-  html body {
-    overflow-x: visible;
-  }
-}
 html body header#top {
   position: relative;
   z-index: 2;
@@ -47,6 +42,7 @@ html body main article {
   background: none;
   height: 100%;
   border-right: 5% black solid;
+  overflow-y: auto;
 }
 html body main article #button {
   position: absolute;
@@ -154,7 +150,7 @@ html body #news {
   position: absolute;
   top: 5.4rem;
   left: 65%;
-  z-index: 6;
+  z-index: 5;
   width: 45.5%;
   background: none !important;
   line-height: 100%;
@@ -247,6 +243,27 @@ html body footer {
 html #live {
   display: none;
 }
+html #pv {
+  position: absolute;
+  top: 165px;
+  right: 1%;
+  z-index: 4;
+  display: block;
+  cursor: pointer;
+  width: 16.66667%;
+  min-width: 250px;
+  height: auto;
+}
+html iframe {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 6;
+  width: 640px;
+  height: 360px;
+  margin: -180px 0 0 -320px;
+}
 html #vs {
   position: absolute;
   bottom: 10%;
@@ -254,6 +271,16 @@ html #vs {
   z-index: 4;
   display: block;
   transform: rotate(12deg);
+  width: 22%;
+  min-width: 300px;
+  height: auto;
+}
+html #exam {
+  position: fixed;
+  bottom: 0;
+  right: 200px;
+  z-index: 11;
+  margin-bottom: 0.8rem;
 }
 html #hero {
   position: absolute;
@@ -261,4 +288,9 @@ html #hero {
   left: 50%;
   z-index: 1;
   margin-left: -80px;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  html .autopagerize_page_separator_blocks {
+    overflow: hidden;
+  }
 }

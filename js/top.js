@@ -22,7 +22,7 @@
 			}
 			ssize = wh*0.7;
 			
-			$('main,article:not(#news),#back').width(w).height(middle).css({'top' : hh , 'min-height' : 500});
+			$('main,article:not(#news),#back').width(w).height(middle).css({'top' : hh , 'min-height' : 650});
 			$('#button li').width(w*0.05).height(w*0.05);
 			$('main > div.btm:not(.active)').width(ssize).height(ssize);
 			$('#back div').addClass('inner');
@@ -31,6 +31,16 @@
 		}
 	
 		start = function() {
+			
+			$('#pv').click(function() { 
+				 
+				$('body').append('<div id="modal"></div><p id="close">×</p>');
+				$('iframe,#close').fadeIn('slow');
+				$('#modal,#close').click(function() {
+					$('iframe,#modal,#close').remove();
+					$('#vs').after('<iframe src="movie.html" frameborder="0"></iframe>');
+				});
+			});
 	
 			for(var i = 0; i < 16 ; ++i) {
 				//random opacity, top, left and angle

@@ -231,15 +231,19 @@ article .contents dd a span {
   margin-right: 6px;
 }
 article .contents .box {
-  margin: 1rem 0 0 0 !important;
+  margin: 3rem 0 !important;
 }
 article .contents .box dt {
   float: left;
   margin-top: 0;
+  width: 6rem;
 }
 article .contents .box dd {
   text-align: left;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
+  border-bottom: #666 1px dotted;
+  padding-left: 6rem;
+  overflow: visible;
 }
 article dfn img {
   vertical-align: middle;

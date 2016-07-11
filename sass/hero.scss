@@ -2,81 +2,74 @@
 /* CSS Document */
 
 @import "settings";
-
-article .half {
-	padding: 0 !important;
-	width: $max / 2;
-	min-width: 423px;
-	border: none;
-				
-	h5 {
-		margin: 0 !important;
-		padding: 0 !important;
+	
+article {
+	&>div {
 		
-		 img {
-			width: $max;
-			height: auto;
-			cursor: pointer;
-		}
-	}
-
-	div {
-		@include fixT(50%,50%,6);
-		width: $max / 2;
-		margin: -25% 0 0 -25%;
-		color: $white;
-		display: none;
-		overflow: auto;
-				
-		h6 {
-			font-size: 1.25rem;
-			color: $white;
-			border-top: $white 3px double;
-			border-bottom: $white 3px double;
-			margin-bottom: 2rem;
-			padding: 1rem;
-			overflow: hidden;
-			font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
-		}
-		
-		img {
-			width: $max / 2;
-			min-width: 212px;
-			height: auto;
-		}
-		
-		.left {
-			float: left;
-			margin-right: 2rem;
-		}
-		
-		.right {
-			float: right;
-			margin-left: 2rem;
-		}
-		
-		a {
-			display: block;
-			text-decoration: none;
-			background-color: $blue;
-			padding: 1rem;
-			text-align: center;
-			color: $white;
-			overflow: hidden;
+		&.contents {
+			position: $r;
+			padding: $max * 0.03 !important;
 			
-			&:hover {
-				opacity: 0.8;
+			&>.right {
+				left: $max * 0.03;
+			}
+			
+			&>.left>section,&>left>img {
+				background-color: $white !important;
+				@include abT(6%,100%,1);
+				width: $max * 0.47;
+				padding: 0 $max*0.03!important;
+				
+				h4 {
+					margin: 2rem 0;
+					padding: 1rem;
+					color: $navy;
+					border-top: $navy 3px double;
+					border-bottom: $navy 3px double;
+				}
+				
+				a {
+					display: block;
+					text-decoration: none;
+					background-color: $blue;
+					margin-bottom: 2rem;
+					padding: 0.5rem;
+					text-align: center;
+					color: $white;
+					overflow: hidden;
+					
+					&:hover {
+						opacity: 0.8;
+					}
+				}
+			}
+			
+			&>img.half {
+				margin-left: $max  / 2;
+				padding: 0 !important;
+				width: $max * 0.47;
 			}
 		}
 	}
-
-}
-
-#close {
-	@include fixT(5%,77.5%,6);
-	font-size: 4rem;
-	display: none;
-	color: $white;
-	cursor: pointer;
-}
 	
+	ul {
+		@include abB(5.5%,50%,2);
+		display: table;
+		background-color: rgba($black , 70%);
+		text-align: center;
+		margin-right: -5rem;
+		
+		li {
+			display: table-cell;
+			padding: 1rem;
+			
+			a {
+				color: $white;
+				
+				&.show {
+					color: $blue;
+				}
+			}
+		}
+	}
+}

@@ -15,7 +15,8 @@
 <meta property="og:locality" content="Osaka,大阪" />
 <meta property="og:image" content="http://www.ntt-west.co.jp/favicon.ico" />
 <link rel="stylesheet" href="css/import.css" />
-<link rel="stylesheet" href="css/addition.css" />
+<link rel="stylesheet" href="css/hero.css" />
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
 </head>
 <body>
 <!--#include virtual="templates/header-nav.inc"-->
@@ -26,6 +27,10 @@
 			<p>補強選手 2016</p>
 		</header>
 		<div>
+			<div class="left half">
+			<img src="img/hero/1.jpg">
+			</div>
+			<div class="right">
 			<section id="1" class="half">
 				<header>
 					<h4>naenta;et</h4>
@@ -44,25 +49,15 @@
 					<dd></dd>
 				</dl>
 			</section>
-			<img src="img/addition/1.jpg" class="half">
-			<section id="2" class="half">
-				<header>
-					<h4>na676ta;et</h4>
-					<p>dsfagag</p>
-				</header>
-				<dl>
-					<dt>dfa</dt>
-					<dd>sfaf</dd>
-					<dt></dt>
-					<dd></dd>
-					<dt></dt>
-					<dd></dd>
-					<dt></dt>
-					<dd></dd>
-					<dt></dt>
-					<dd></dd>
-				</dl>
+			<section id="2" class="half tse-scrollable">
+				<div class="tse-content">
+					<h4>中盤以降はほぼ完璧なピッチングで相手打線を翻弄！見事な最少失点完投で2回戦突破の立役者となった浜崎投手</h4>
+				<p>(初回の失点は)どんな形であれ、やはり立ち上がりに点を取られたのは先発として悔しいです。ですが監督からは「1、2点の失点は心配せずに思い切っていけ」と言っていただいていたので、引きずらず以降のバッターをきっちり抑えることに集中しました。ストレートを主体にスライダー、チェンジアップと変化球を要所で絡め、中盤以降はバッターのタイミングをほぼイメージ通りに外せていたと思います。とにかく、チームの勝利に貢献できて今は最高の気分ですね。</p>
+				<p>今日の試合も6回表に同点に追いついた時点で、「イケる！」という雰囲気がチーム全体に漂っていました。チームはこの良い流れをそのまま準々決勝にぶつけたいと気合十分です。応援席の皆さんに元気を届けられるようなナイスゲームをお見せしますので、準々決勝以降も熱い応援をよろしくお願いします！</p>
+				<a href="">パーソナルページはこちら ≫</a>
+				</div>
 			</section>
+			</div>
 			<ul>
 				<li><a href="#1" class="show">wrwe</a></li>
 				<li><a href="#2">ewe</a></li>
@@ -73,27 +68,28 @@
 	</article>
 </main>
 <!--#include virtual="templates/footer.inc"--> 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript">
 $(window).on('load resize', function() {
 	
-	$('article > div > section').outerHeight($('img.half').height());
+	$('article div section').height($('.half img').height()).mCustomScrollbar({theme: "minimal-dark"});
 });
 
 $(function() {
 		
 　　$('article > div > ul a').on('click' , function() {
 		
-		$('article li a').removeClass('show');
+		$(this).siblings().removeClass('show');
 		$(this).addClass('show');
 		
-		var num		= $('article > div > ul a').index(this);
-		var num2	= $('article > div > ul a').index('.show');
+		var num		= $(this).siblings().index(this);
+		var num2	= $(this).siblings().index('.show');
 		var target	= $(this).attr('href');
 			
 		setTimeout(function(){
-			$('article img').attr('src' , 'img/addition/' + (num + 1) + '.jpg');
+			$('article img').attr('src' , 'img/hero/' + (num + 1) + '.jpg');
 		} , 500);
 		
 		if (num > num2) {

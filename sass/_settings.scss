@@ -83,6 +83,13 @@ $modal4: rgba(#012052,0.7);
 	z-index: $z;
 }
 
+@mixin abR($top,$right,$z) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	z-index: $z;
+}
+
 @mixin fixT($top,$left,$z) {
 	position: fixed;
 	top: $top;
