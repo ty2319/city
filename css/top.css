@@ -161,7 +161,7 @@ html body #news {
     top: 11rem;
     left: 1rem;
     z-index: 3;
-    width: 100% !important;
+    width: 1500px !important;
   }
 }
 html body #news h3 {
@@ -234,7 +234,7 @@ html body #news div ul li a {
   text-decoration: underline;
 }
 html body footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   z-index: 10;
@@ -265,7 +265,7 @@ html iframe {
   margin: -180px 0 0 -320px;
 }
 html #vs {
-  position: absolute;
+  position: fixed;
   bottom: 10%;
   right: 0.5%;
   z-index: 4;
@@ -288,9 +288,4 @@ html #hero {
   left: 50%;
   z-index: 1;
   margin-left: -80px;
-}
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  html .autopagerize_page_separator_blocks {
-    overflow: hidden;
-  }
 }

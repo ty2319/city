@@ -1,28 +1,44 @@
 /* CSS Document */
-article > div.contents {
+article > .contents > div {
   position: relative;
-  padding: 3% !important;
+  padding-left: 3% !important;
+  overflow: hidden;
 }
-article > div.contents > .right {
-  left: 3%;
+article > .contents > div > img {
+  padding: 0 !important;
+  border: none !important;
+  width: 48.5%;
 }
-article > div.contents > .left > section, article > div.contents > left > img {
+article > .contents > div > section {
+  padding: 0 3% !important;
   background-color: #fff !important;
+}
+article > .contents > div > .left {
   position: absolute;
-  top: 6%;
+  top: 0;
   left: 100%;
   z-index: 1;
   width: 47%;
-  padding: 0 3% !important;
+  border: none !important;
+  display: block;
 }
-article > div.contents > .left > section h4, article > div.contents > left > img h4 {
+article > .contents > div > .right {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 0;
+  width: 47%;
+  border: none !important;
+  display: none;
+}
+article > .contents > div h5 {
   margin: 2rem 0;
   padding: 1rem;
   color: #012052;
   border-top: #012052 3px double;
   border-bottom: #012052 3px double;
 }
-article > div.contents > .left > section a, article > div.contents > left > img a {
+article > .contents > div a {
   display: block;
   text-decoration: none;
   background-color: #2c7eff;
@@ -32,31 +48,25 @@ article > div.contents > .left > section a, article > div.contents > left > img 
   color: #fff;
   overflow: hidden;
 }
-article > div.contents > .left > section a:hover, article > div.contents > left > img a:hover {
+article > .contents > div a:hover {
   opacity: 0.8;
 }
-article > div.contents > img.half {
-  margin-left: 50%;
-  padding: 0 !important;
-  width: 47%;
-}
-article ul {
-  position: absolute;
-  bottom: 5.5%;
-  right: 50%;
-  z-index: 2;
+article > .contents ul {
   display: table;
-  background-color: black;
+  background-color: rgba(26, 26, 26, 0.8);
   text-align: center;
-  margin-right: -5rem;
+  margin: -3.75rem auto 5rem auto;
+  position: relative;
+  z-index: 1;
 }
-article ul li {
+article > .contents ul li {
   display: table-cell;
   padding: 1rem;
+  font-weight: bold;
 }
-article ul li a {
-  color: #fff;
-}
-article ul li a.show {
+article > .contents ul li.show a {
   color: #2c7eff;
+}
+article > .contents ul li a {
+  color: #fff;
 }

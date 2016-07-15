@@ -107,7 +107,7 @@ $(function(){
 // SJIS("ASCII,JIS,UTF-8,EUC-JP,SJIS")からEUC-JPに変換
   $string_header = mb_convert_encoding($string, "EUC-JP", "auto");
 
-  $string = get_include_contents( "./templates/aside-footer.inc" );
+  $string = get_include_contents( "./templates/footer.inc" );
   $string_footer = mb_convert_encoding($string, "EUC-JP", "auto");
 
   // get_include_contents()関数
