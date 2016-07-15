@@ -123,17 +123,17 @@ article .double .one_third p {
   background: url(/symbol/hp/baseball/games/2016/city/img/mascot/line.gif) left 55px;
   line-height: 28px;
 }
-article section header {
+article section header, article div.contents header {
   text-align: center;
   margin-bottom: 5rem;
   color: #012052;
 }
-article section header h4 {
+article section header h4, article div.contents header h4 {
   font-size: 2rem;
   line-height: 100%;
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
 }
-article section header p {
+article section header p, article div.contents header p {
   font-family: century;
   margin: 0.5rem 0 0 !important;
 }
@@ -237,10 +237,11 @@ article .contents .box dt {
   float: left;
   margin-top: 0;
   width: 6rem;
+  text-align: right;
 }
 article .contents .box dd {
   text-align: left;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
   border-bottom: #666 1px dotted;
   padding-left: 6rem;
   overflow: visible;

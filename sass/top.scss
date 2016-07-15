@@ -168,7 +168,7 @@ html {
 			
 			@include media($of) {
 				@include abT(11rem,1rem,3);
-				width: $max !important;
+				width: 1500px !important;
 			}
 			
 			h3 {
@@ -247,7 +247,7 @@ html {
 		}
 		
 		footer {
-			@include abB(0,0,10);
+			@include fixB(0,0,10);
 			width: $max;
 		}
 	}
@@ -274,7 +274,7 @@ html {
 	}
 	
 	#vs {
-		@include abB(10%,0.5%,4);
+		@include fixB(10%,0.5%,4);
 		display: block;
 		transform: rotate(12deg);
 		width: $max * 0.22;
@@ -290,11 +290,5 @@ html {
 	#hero {
 		@include abT(75%,50%,1);
 		margin-left: -80px;
-	}
-		
-	@media screen and (-webkit-min-device-pixel-ratio:0) {
-		.autopagerize_page_separator_blocks {
-			overflow: hidden;
-		}
 	}
 }

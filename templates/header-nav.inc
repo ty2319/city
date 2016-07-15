@@ -16,13 +16,13 @@
 	<ul id="main">
 		<li><a href="/symbol/hp/baseball/games/2016/city/index.html"><span class="fa fa-home"></span>トップページ<i>Top Page</i></a></li>
 		<li><a href="/symbol/hp/baseball/games/2016/city/tournament.html"><span class="fa fa-sitemap"></span>トーナメント表<i>Tournament Bracket</i></a></li>
-		<li><!--<a href="/symbol/hp/baseball/games/2016/city/results.html">--><span class="fa fa-list-ol"></span>試合結果<i>Results</i><!--</a>--></li>
-		<li><!--<a href="/symbol/hp/baseball/games/2016/city/gallery.html">--><span class="fa fa-camera"></span>ギャラリー<i>Photo gallery</i><!--</a>--></li>
+		<li><a href="/symbol/hp/baseball/games/2016/city/results.html"><span class="fa fa-list-ol"></span>試合結果<i>Results</i></a></li>
+		<li><a href="/symbol/hp/baseball/games/2016/city/gallery.html"><span class="fa fa-camera"></span>ギャラリー<i>Photo gallery</i></a></li>
 		<li><a href="/symbol/hp/baseball/games/2016/city/aid.html"><span class="fa fa-volume-up"></span>応援ガイド<i>Guidance of aid</i></a></li>
 		<li><a href="/symbol/hp/baseball/games/2016/city/access.html"><span class="fa fa-map-marker"></span>アクセスガイド<i>Guidance to a stadium</i> </a> </li>
 	</ul>
 	<ul id="topics">
-		<li><!--<a href="/symbol/hp/baseball/games/2016/city/addition.html">--><span class="fa fa-plus"></span>補強選手 2016<i><!--Additional Player-->Comming soon</i><!--</a>--></li>
+		<li><a href="/symbol/hp/baseball/games/2016/city/addition.html"><span class="fa fa-plus"></span>補強選手 2016<i>Additional Player</i></a></li>
 		<li><a href="/symbol/hp/baseball/games/2016/city/mascot.html"><span class="fa fa-pencil-square-o"></span>マスコットの会場リポート<i>The mascot's game report</i></a></li>
 		<!--<li><a href="/symbol/hp/baseball/games/2016/city/hero.html"><span class="fa fa-microphone"></span>ヒーローインタビュー<i>Hero Interview</i></a></li>-->
 		<li><a href="/symbol/hp/baseball/games/2016/city/history.html"><span class="fa fa-trophy"></span>都市対抗野球とNTTグループの歴史<i>History</i></a></li>
@@ -34,5 +34,5 @@
 	<li><a href="http://www.ntt-west.co.jp/symbol/mobile_mail/index.html" target="_blank" class="banner"><span class="fa fa-envelope-o"></span>速報メールマガジン ご登録</a></li>
 	<li><a href="http://www.ntt-west.co.jp/symbol/fan/index.html" target="_blank" class="banner"><span class="fa fa-user-plus"></span>ファンクラブ ご登録</a></li>
 	</ul>
-	<p id="live"><!--<a href="/symbol/hp/baseball/games/2016/city/scoreboard.php" >--><img src="/symbol/hp/baseball/games/2016/city/img/common/live.png" alt="試合速報配信中！"><!--</a>--></p>
+	<p id="live"><a href="/symbol/hp/baseball/games/2016/city/scoreboard.php" ><img src="/symbol/hp/baseball/games/2016/city/img/common/live.png" alt="試合速報配信中！"></a></p>
 </nav>

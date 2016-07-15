@@ -4,70 +4,84 @@
 @import "settings";
 	
 article {
-	&>div {
+	
+	&>.contents {
 		
-		&.contents {
+		&>div {
 			position: $r;
-			padding: $max * 0.03 !important;
-			
-			&>.right {
-				left: $max * 0.03;
+			padding-left: $max * 0.03 !important;
+			overflow: hidden;
+	
+			&> img {
+				padding: 0 !important;
+				border: none !important;
+				width: $max * 0.485;
 			}
 			
-			&>.left>section,&>left>img {
+			&> section {
+				padding: 0 $max*0.03 !important;
 				background-color: $white !important;
-				@include abT(6%,100%,1);
+			}
+						
+			&> .left {
+				@include abT(0,100%,1);
 				width: $max * 0.47;
-				padding: 0 $max*0.03!important;
+				border: none !important;
+				display: block;
+			}
+			
+			&> .right {
+				@include abT(0,50%,0);
+				width: $max * 0.47;
+				border: none !important;
+				display: none;
+			}
+			
+			h5 {
+				margin: 2rem 0;
+				padding: 1rem;
+				color: $navy;
+				border-top: $navy 3px double;
+				border-bottom: $navy 3px double;
+			}
+			
+			a {
+				display: block;
+				text-decoration: none;
+				background-color: $blue;
+				margin-bottom: 2rem;
+				padding: 0.5rem;
+				text-align: center;
+				color: $white;
+				overflow: hidden;
 				
-				h4 {
-					margin: 2rem 0;
-					padding: 1rem;
-					color: $navy;
-					border-top: $navy 3px double;
-					border-bottom: $navy 3px double;
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+		}
+
+		ul {
+			display: table;
+			background-color: lighten($modal , 10%);
+			text-align: center;
+			margin: -3.75rem auto 5rem auto;
+			position: $r;
+			z-index: 1;
+			
+			li {
+				display: table-cell;
+				padding: 1rem;
+				font-weight: bold;
+					
+				&.show {
+					a {
+						color: $blue;
+					}
 				}
 				
 				a {
-					display: block;
-					text-decoration: none;
-					background-color: $blue;
-					margin-bottom: 2rem;
-					padding: 0.5rem;
-					text-align: center;
 					color: $white;
-					overflow: hidden;
-					
-					&:hover {
-						opacity: 0.8;
-					}
-				}
-			}
-			
-			&>img.half {
-				margin-left: $max  / 2;
-				padding: 0 !important;
-				width: $max * 0.47;
-			}
-		}
-	}
-	
-	ul {
-		@include abB(5.5%,50%,2);
-		display: table;
-		background-color: rgba($black , 70%);
-		text-align: center;
-		margin-right: -5rem;
-		
-		li {
-			display: table-cell;
-			padding: 1rem;
-			
-			a {
-				color: $white;
-				
-				&.show {
-					color: $blue;
 				}
 			}
 		}
